@@ -110,7 +110,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Politique de confidentialité</a>
-              <a href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Conditions d'utilisation</a>
+              <a href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Conditions d&apos;utilisation</a>
             </div>
           </div>
         </div>

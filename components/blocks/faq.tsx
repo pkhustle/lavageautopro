@@ -6,7 +6,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Quels sont les services offerts ?",
-    answer: "Nous offrons une gamme complète de services d'esthétique automobile, incluant le lavage extérieur, le nettoyage intérieur, le polissage, la protection céramique, et le traitement du cuir. Nos services sont personnalisés selon vos besoins et l'état de votre véhicule."
+    answer: "Nous offrons une gamme complète de services d&apos;esthétique automobile, incluant le lavage extérieur, le nettoyage intérieur, le polissage, la protection céramique, et le traitement du cuir. Nos services sont personnalisés selon vos besoins et l&apos;état de votre véhicule."
   },
   {
     question: "Où offrez-vous vos services ?",
@@ -14,10 +14,10 @@ const faqs = [
   },
   {
     question: "Dois-je faire quelque chose avant mon rendez-vous ?",
-    answer: "Pour un service optimal, nous recommandons simplement de retirer vos effets personnels du véhicule avant notre arrivée. Cela nous permet d'effectuer un nettoyage plus approfondi et efficace."
+    answer: "Pour un service optimal, nous recommandons simplement de retirer vos effets personnels du véhicule avant notre arrivée. Cela nous permet d&apos;effectuer un nettoyage plus approfondi et efficace."
   },
   {
-    question: "En quoi êtes-vous différent des services traditionnels d'esthétique automobile près de chez moi ?",
+    question: "En quoi êtes-vous différent des services traditionnels d&apos;esthétique automobile près de chez moi ?",
     answer: "GrAuto se distingue par son service mobile de haute qualité, notre expertise professionnelle, et notre engagement envers la satisfaction client. Nous utilisons des produits haut de gamme et des techniques avancées pour garantir les meilleurs résultats."
   },
   {
@@ -25,12 +25,12 @@ const faqs = [
     answer: "Un nettoyage régulier protège votre investissement en préservant la peinture, en prévenant la rouille, et en maintenant la valeur de revente de votre véhicule. De plus, un intérieur propre contribue à un environnement plus sain et plus agréable."
   },
   {
-    question: "Comment fonctionne votre service mobile d'esthétique automobile?",
-    answer: "Après votre réservation, nous nous déplaçons à l'endroit de votre choix avec tout l'équipement nécessaire. Notre équipe professionnelle s'occupe de tout, vous n'avez qu'à nous fournir un accès à de l'eau et de l'électricité."
+    question: "Comment fonctionne votre service mobile d&apos;esthétique automobile?",
+    answer: "Après votre réservation, nous nous déplaçons à l&apos;endroit de votre choix avec tout l&apos;équipement nécessaire. Notre équipe professionnelle s&apos;occupe de tout, vous n&apos;avez qu&apos;à nous fournir un accès à de l&apos;eau et de l&apos;électricité."
   },
   {
-    question: "Combien de temps dure le processus d'esthétique automobile?",
-    answer: "La durée varie selon le service choisi et l'état du véhicule. Un nettoyage complet intérieur/extérieur prend généralement entre 2 et 4 heures. Pour des services plus spécialisés comme la protection céramique, cela peut prendre une journée entière."
+    question: "Combien de temps dure le processus d&apos;esthétique automobile?",
+    answer: "La durée varie selon le service choisi et l&apos;état du véhicule. Un nettoyage complet intérieur/extérieur prend généralement entre 2 et 4 heures. Pour des services plus spécialisés comme la protection céramique, cela peut prendre une journée entière."
   }
 ];
 
@@ -80,7 +80,7 @@ export function FAQ() {
             Questions <span className="text-primary">fréquentes</span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Trouvez les réponses à vos questions sur nos services d'esthétique automobile
+            Trouvez les réponses à vos questions sur nos services d&apos;esthétique automobile
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-3xl divide-y divide-gray-700">

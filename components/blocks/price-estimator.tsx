@@ -134,7 +134,7 @@ export function PriceEstimator() {
                 </span>
               </div>
               <p className="mt-2 text-sm text-gray-600">
-                *Prix indicatif pouvant varier selon l'état du véhicule
+                *Prix indicatif pouvant varier selon l&apos;état du véhicule
               </p>
             </div>
 

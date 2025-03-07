@@ -8,13 +8,13 @@ import { SITE_CONFIG } from '../../lib/constants';
 
 export const metadata = {
   title: 'Nos Services | ' + SITE_CONFIG.name,
-  description: 'Découvrez notre gamme complète de services de lavage et d\'entretien automobile professionnel.',
+  description: 'Découvrez notre gamme complète de services de lavage et d&apos;entretien automobile professionnel.',
 };
 
 const serviceFeatures = [
   {
     title: 'Expertise professionnelle',
-    description: 'Notre équipe est formée aux dernières techniques de nettoyage et d\'entretien automobile.',
+    description: 'Notre équipe est formée aux dernières techniques de nettoyage et d&apos;entretien automobile.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path
@@ -28,7 +28,7 @@ const serviceFeatures = [
   },
   {
     title: 'Produits de qualité',
-    description: 'Nous utilisons uniquement des produits haut de gamme, respectueux de votre véhicule et de l\'environnement.',
+    description: 'Nous utilisons uniquement des produits haut de gamme, respectueux de votre véhicule et de l&apos;environnement.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path
@@ -42,7 +42,7 @@ const serviceFeatures = [
   },
   {
     title: 'Service personnalisé',
-    description: 'Chaque véhicule est unique, c\'est pourquoi nous adaptons nos services à vos besoins spécifiques.',
+    description: 'Chaque véhicule est unique, c&apos;est pourquoi nous adaptons nos services à vos besoins spécifiques.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path
@@ -117,7 +117,7 @@ export default function ServicesPage() {
               Services professionnels de lavage automobile
             </h2>
             <p className="mt-4 text-lg text-foreground/80">
-              Chez {SITE_CONFIG.name}, nous proposons une gamme complète de services de nettoyage et d'entretien pour tous types de véhicules. Que vous ayez besoin d'un lavage intérieur approfondi, d'un nettoyage extérieur minutieux ou d'un service complet de détailing, notre équipe d'experts est là pour redonner à votre véhicule son éclat d'origine.
+              Chez {SITE_CONFIG.name}, nous proposons une gamme complète de services de nettoyage et d&apos;entretien pour tous types de véhicules. Que vous ayez besoin d&apos;un lavage intérieur approfondi, d&apos;un nettoyage extérieur minutieux ou d&apos;un service complet de détailing, notre équipe d&apos;experts est là pour redonner à votre véhicule son éclat d&apos;origine.
             </p>
           </div>
         </Container>
