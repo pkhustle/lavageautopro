@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color System - Black and Red Theme */
+  --color-primary: 220, 38, 38; /* Vibrant Red */
+  --color-secondary: 0, 0, 0; /* Black */
+  --color-accent: 185, 28, 28; /* Darker Red */
+  
+  /* Neutral Colors - High contrast */
+  --color-background: 245, 245, 245;
+  --color-foreground: 0, 0, 0;
+  
+  /* Font Family Variables */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-montserrat);
+  --font-accent: var(--font-poppins);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  p {
+    @apply font-sans leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-white hover:shadow-md hover:shadow-primary/20 hover:-translate-y-0.5 focus-visible:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary to-secondary/90 text-white hover:shadow-md hover:shadow-secondary/20 hover:-translate-y-0.5 focus-visible:ring-secondary;
+  }
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent to-accent/90 text-white hover:shadow-md hover:shadow-accent/20 hover:-translate-y-0.5 focus-visible:ring-accent;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:text-primary;
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .section {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl text-gradient;
+  }
+  
+  .section-description {
+    @apply mt-4 text-lg text-gray-600 max-w-3xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary via-primary/90 to-secondary;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-accent via-primary/90 to-primary;
+  }
+
+  .gradient-modern {
+    @apply bg-gradient-to-tr from-secondary via-accent to-primary;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 supports-[backdrop-filter]:bg-white/50 border border-white/20;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .shadow-soft {
+    @apply shadow-lg shadow-primary/5;
+  }
+  
+  .border-gradient {
+    @apply border border-transparent bg-gradient-to-r from-primary/20 to-secondary/20 bg-origin-border;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-primary/30 hover:bg-primary/50;
+}
+
+/* Animation Utilities */
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-friendly tap targets */
+@media (max-width: 640px) {
+  .btn, 
+  a, 
+  button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
