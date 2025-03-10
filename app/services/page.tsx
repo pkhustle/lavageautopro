@@ -106,7 +106,7 @@ export default function ServicesPage() {
         description="Découvrez notre gamme complète de services professionnels pour l'entretien et le nettoyage de votre véhicule."
         cta={{
           text: "Réserver maintenant",
-          href: "/contact",
+          href: `${SITE_CONFIG.url}/contact`,
         }}
       />
 
@@ -166,7 +166,7 @@ export default function ServicesPage() {
             </p>
             <div className="mt-8">
               <Button asChild size="lg">
-                <Link href="/contact">Réserver maintenant</Link>
+                <Link href={`${SITE_CONFIG.url}/contact`}>Réserver maintenant</Link>
               </Button>
             </div>
           </div>

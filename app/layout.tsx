@@ -43,6 +43,9 @@ export const metadata = {
     locale: 'fr_CA',
     type: 'website',
   },
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
 };
 
 export default function RootLayout({

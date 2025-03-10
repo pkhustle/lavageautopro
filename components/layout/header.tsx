@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Container } from '../ui/container';
-import { SERVICES } from '../../lib/constants';
+import { SERVICES, SITE_CONFIG } from '../../lib/constants';
 import { cn } from '../../lib/utils';
 
 export function Header() {
@@ -25,10 +25,10 @@ export function Header() {
   }, []);
 
   const navigation = [
-    { name: 'Acceuil', href: '/' },
+    { name: 'Acceuil', href: `${SITE_CONFIG.url}/` },
     { name: 'Services', href: '#', dropdown: true },
-    { name: 'Nous contacter', href: '/contact' },
-    { name: 'FAQ', href: '/#faq' },
+    { name: 'Nous contacter', href: `${SITE_CONFIG.url}/contact` },
+    { name: 'FAQ', href: `${SITE_CONFIG.url}/#faq` },
   ];
 
   return (
@@ -36,7 +36,7 @@ export function Header() {
       <Container>
         <nav className="flex h-16 items-center justify-between">
           <div className="flex lg:flex-1">
-            <Link href="/" className="flex items-center">
+            <Link href={`${SITE_CONFIG.url}/`} className="flex items-center">
               <span className="text-xl font-bold text-white">
                 <span className="text-primary">Lavage</span> Auto <span className="text-primary">Pro</span>
               </span>
@@ -118,7 +118,7 @@ export function Header() {
                         {SERVICES.map((service) => (
                           <Link
                             key={service.id}
-                            href={`/${service.id}`}
+                            href={`${SITE_CONFIG.url}/${service.id}`}
                             className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-primary transition-colors"
                             onClick={() => setServicesOpen(false)}
                           >
@@ -148,7 +148,7 @@ export function Header() {
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="/contact"
+              href={`${SITE_CONFIG.url}/contact`}
               className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-primary to-accent px-4 py-2 text-sm font-medium text-white shadow-sm hover:shadow-md hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Réserver <span className="ml-1" aria-hidden="true">&rarr;</span>
@@ -167,7 +167,7 @@ export function Header() {
                     {SERVICES.map((service) => (
                       <Link
                         key={service.id}
-                        href={`/${service.id}`}
+                        href={`${SITE_CONFIG.url}/${service.id}`}
                         className="block px-3 py-2 text-sm text-white hover:text-primary"
                         onClick={() => setIsOpen(false)}
                       >

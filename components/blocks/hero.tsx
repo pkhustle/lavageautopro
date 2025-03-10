@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Container } from '../ui/container';
 import { Button } from '../ui/button';
+import { SITE_CONFIG } from '../../lib/constants';
 
 interface HeroProps {
   title: string;
@@ -45,7 +46,7 @@ export function Hero({ title, description, cta, showPattern = true }: HeroProps)
                   variant="outline-secondary"
                   className="shadow-lg hover:bg-primary/90 hover:shadow-primary/30"
                 >
-                  <Link href={cta.href}>{cta.text}</Link>
+                  <Link href={cta.href.startsWith('/') ? `${SITE_CONFIG.url}${cta.href}` : cta.href}>{cta.text}</Link>
                 </Button>
                 <Button 
                   asChild 
@@ -53,7 +54,7 @@ export function Hero({ title, description, cta, showPattern = true }: HeroProps)
                   variant="secondary"
                   className="border border-white shadow-lg bg-black/50 text-white hover:bg-primary/20 hover:border-primary/80"
                 >
-                  <Link href="/services">Voir nos services</Link>
+                  <Link href={`${SITE_CONFIG.url}/services`}>Voir nos services</Link>
                 </Button>
               </div>
             )}

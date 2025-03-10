@@ -1,5 +1,5 @@
 import { Hero } from './hero';
-import { LOCATIONS } from '../../lib/constants';
+import { LOCATIONS, SITE_CONFIG } from '../../lib/constants';
 
 interface ServiceHeroProps {
   title: string;
@@ -26,7 +26,7 @@ export function ServiceHero({ title, description, location }: ServiceHeroProps) 
         description={heroDescription}
         cta={{
           text: "Réserver maintenant",
-          href: "/contact",
+          href: `${SITE_CONFIG.url}/contact`,
         }}
       />
       {location && nearbyLocations.length > 0 && (

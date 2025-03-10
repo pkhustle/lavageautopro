@@ -16,7 +16,7 @@ export function Footer() {
       title: 'Services',
       links: SERVICES.map(service => ({
         label: service.name,
-        href: `/${service.id}`,
+        href: `${SITE_CONFIG.url}/${service.id}`,
       })),
     },
     {
@@ -46,7 +46,7 @@ export function Footer() {
       <Container className="py-16 md:py-20">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center">
+            <Link href={`${SITE_CONFIG.url}/`} className="flex items-center">
               <span className="text-xl font-bold text-white">
                 <span className="text-primary">Lavage</span> Auto <span className="text-primary">Pro</span>
               </span>

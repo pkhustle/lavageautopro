@@ -5,7 +5,7 @@ import { Team } from '../../components/blocks/team';
 import { ServicesGrid } from '../../components/blocks/services-grid';
 import { Container } from '../../components/ui/container';
 import { Button } from '../../components/ui/button';
-import { SERVICES, LOCATIONS } from '../../lib/constants';
+import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../lib/constants';
 import { generateServiceSchema } from '../../lib/seo';
 import Link from 'next/link';
 
@@ -180,7 +180,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             {LOCATIONS.map((location) => (
               <Link
                 key={location.id}
-                href={`/${service.id}/${location.id}`}
+                href={`${SITE_CONFIG.url}/${service.id}/${location.id}`}
                 className="rounded-lg border border-gray-700 bg-gray-800 p-4 text-center shadow-sm transition-colors hover:border-primary hover:text-primary"
               >
                 {location.name}

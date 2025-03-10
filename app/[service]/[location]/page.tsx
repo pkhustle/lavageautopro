@@ -10,7 +10,7 @@ import { FAQ } from '../../../components/blocks/faq';
 import { ServicesGrid } from '../../../components/blocks/services-grid';
 import { Container } from '../../../components/ui/container';
 import { Button } from '../../../components/ui/button';
-import { SERVICES, LOCATIONS } from '../../../lib/constants';
+import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
 
@@ -211,7 +211,7 @@ export default function LocationServicePage({ params }: LocationServicePageProps
             </p>
             <div className="mt-8">
               <Button asChild size="lg">
-                <Link href={`/contact?location=${location.id}`}>Réserver maintenant</Link>
+                <Link href={`${SITE_CONFIG.url}/contact?location=${location.id}`}>Réserver maintenant</Link>
               </Button>
             </div>
           </div>

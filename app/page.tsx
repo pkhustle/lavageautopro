@@ -105,7 +105,7 @@ export default function Home() {
         description="Redonnez à votre véhicule son éclat d'origine avec nos services de nettoyage professionnel. Une équipe expérimentée et des résultats garantis."
         cta={{
           text: "Réserver maintenant",
-          href: "/contact",
+          href: `${SITE_CONFIG.url}/contact`,
         }}
       />
 
@@ -160,10 +160,10 @@ export default function Home() {
             </p>
             <div className="mt-10 flex justify-center gap-6">
               <Button asChild variant="outline-accent">
-                <Link href="/contact">Nous contacter</Link>
+                <Link href={`${SITE_CONFIG.url}/contact`}>Nous contacter</Link>
               </Button>
               <Button asChild variant="outline-primary" className="bg-white hover:bg-white/90">
-                <Link href="/services">Voir nos services</Link>
+                <Link href={`${SITE_CONFIG.url}/services`}>Voir nos services</Link>
               </Button>
             </div>
           </div>

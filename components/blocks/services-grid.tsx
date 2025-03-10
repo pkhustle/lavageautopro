@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Container } from '../ui/container';
 import { Grid } from '../ui/container';
-import { SERVICES } from '../../lib/constants';
+import { SERVICES, SITE_CONFIG } from '../../lib/constants';
 
 interface ServiceCardProps {
   title: string;
@@ -126,7 +126,7 @@ export function ServicesGrid({
               title={service.name}
               description={service.description}
               features={service.features}
-              href={`/${service.id}`}
+              href={`${SITE_CONFIG.url}/${service.id}`}
               image={serviceImages[service.id as keyof typeof serviceImages] || ''}
             />
           ))}
@@ -134,7 +134,7 @@ export function ServicesGrid({
         {!showAll && (
           <div className="mt-12 text-center">
             <Link
-              href="/services"
+              href={`${SITE_CONFIG.url}/services`}
               className="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors"
             >
               Voir tous nos services <span aria-hidden="true">→</span>
