@@ -128,7 +128,7 @@ export const CONTACT_INFO = {
 export const SITE_CONFIG = {
   name: 'Lavage Auto Pro',
   description: 'Services professionnels de lavage et détailing automobile au Québec',
-  url: 'http://lavageautointerieur.ca', // website URL
+  url: 'https://lavageautointerieur.ca', // website URL
   defaultTitle: 'Lavage Auto Pro | Services Professionnels de Lavage Automobile',
   defaultDescription: 'Services professionnels de lavage et détailing automobile. Nettoyage intérieur et extérieur, protection et restauration de véhicules.',
   defaultKeywords: 'lavage auto, détailing, nettoyage voiture, lavage intérieur, lave auto à la main, service automobile'
