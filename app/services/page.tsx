@@ -9,6 +9,9 @@ import { SITE_CONFIG } from '../../lib/constants';
 export const metadata = {
   title: 'Nos Services | ' + SITE_CONFIG.name,
   description: 'Découvrez notre gamme complète de services de lavage et d&apos;entretien automobile professionnel.',
+  alternates: {
+    canonical: `${SITE_CONFIG.url}/services`,
+  },
 };
 
 const serviceFeatures = [

@@ -15,6 +15,9 @@ import { SITE_CONFIG } from '../lib/constants';
 export const metadata = {
   title: SITE_CONFIG.defaultTitle,
   description: SITE_CONFIG.description,
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
 };
 
 const homeFeatures = [

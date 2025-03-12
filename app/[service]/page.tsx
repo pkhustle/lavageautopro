@@ -54,6 +54,9 @@ export async function generateMetadata({ params }: ServicePageProps) {
       title: service.name,
       description: service.metaDescription,
     },
+    alternates: {
+      canonical: `${SITE_CONFIG.url}/${params.service}`,
+    },
   };
 }
 

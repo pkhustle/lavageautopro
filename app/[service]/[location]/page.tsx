@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: LocationServicePageProps) {
   const location = LOCATIONS.find((l) => l.id === params.location);
   if (!service || !location) return {};
 
-  return generateLocationMetadata(service.name, location.name);
+  return generateLocationMetadata(service.name, location.name, params.service, params.location);
 }
 
 const locationFeatures = [

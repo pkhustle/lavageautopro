@@ -6,6 +6,7 @@ interface MetaProps {
   keywords?: string;
   noindex?: boolean;
   nofollow?: boolean;
+  path?: string;
 }
 
 export function generateMetadata({
@@ -14,6 +15,7 @@ export function generateMetadata({
   keywords,
   noindex = false,
   nofollow = false,
+  path = '',
 }: MetaProps = {}) {
   const finalTitle = title 
     ? `${title} | ${SITE_CONFIG.name}`
@@ -41,7 +43,7 @@ export function generateMetadata({
       siteName: SITE_CONFIG.name,
     },
     alternates: {
-      canonical: SITE_CONFIG.url,
+      canonical: path ? `${SITE_CONFIG.url}/${path}` : SITE_CONFIG.url,
     },
     twitter: {
       card: 'summary_large_image',
@@ -51,7 +53,7 @@ export function generateMetadata({
   };
 }
 
-export function generateLocationMetadata(service: string, location: string) {
+export function generateLocationMetadata(service: string, location: string, serviceId: string, locationId: string) {
   const title = `${service} à ${location}`;
   const description = `Service professionnel de ${service.toLowerCase()} à ${location}. Expertise locale, satisfaction garantie. Réservez maintenant!`;
   const keywords = `${service}, ${location}, lavage auto, detailing, nettoyage voiture, service automobile ${location}, lavage voiture ${location}`;
@@ -60,6 +62,7 @@ export function generateLocationMetadata(service: string, location: string) {
     title,
     description,
     keywords,
+    path: `${serviceId}/${locationId}`,
   });
 }
 

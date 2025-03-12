@@ -7,6 +7,7 @@ export const metadata = generateMetadata({
   title: 'Contact | Réservez votre service de lavage auto',
   description: 'Contactez-nous pour réserver votre service de lavage auto professionnel. Service rapide et professionnel, satisfaction garantie.',
   keywords: 'contact, réservation, lavage auto, nettoyage voiture, service automobile',
+  path: 'contact',
 });
 
 function BusinessHours() {
