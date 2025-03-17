@@ -66,12 +66,14 @@ export function generateLocationMetadata(service: string, location: string, serv
   });
 }
 
-export function generateServiceSchema(service: string, location?: string) {
+export function generateServiceSchema(service: string, location?: string, serviceId?: string, locationId?: string) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'AutoRepair',
-    name: SITE_CONFIG.name,
-    description: SITE_CONFIG.description,
+    name: location ? `${SITE_CONFIG.name} - ${service} à ${location}` : SITE_CONFIG.name,
+    description: location 
+      ? `Service professionnel de ${service.toLowerCase()} à ${location}. Expertise locale, satisfaction garantie.` 
+      : SITE_CONFIG.description,
     address: {
       '@type': 'PostalAddress',
       streetAddress: CONTACT_INFO.address,
@@ -85,11 +87,24 @@ export function generateServiceSchema(service: string, location?: string) {
       latitude: '46.8649',  // Example coordinates for Quebec City
       longitude: '-71.2173',
     },
-    url: SITE_CONFIG.url,
+    url: serviceId && locationId 
+      ? `${SITE_CONFIG.url}/${serviceId}/${locationId}` 
+      : SITE_CONFIG.url,
     telephone: '',  // Add phone when available
     priceRange: '$$',
     areaServed: location ? location : 'Québec',
     serviceType: service,
+    // Add more specific details for location pages
+    ...(location && {
+      slogan: `Le meilleur service de ${service.toLowerCase()} à ${location}`,
+      keywords: `${service}, ${location}, lavage auto, detailing, nettoyage voiture, service automobile ${location}`,
+      availableLanguage: ['fr', 'en'],
+      paymentAccepted: 'Cash, Credit Card, Debit Card',
+      openingHours: [
+        'Mo-Fr 08:00-18:00',
+        'Sa 09:00-17:00'
+      ]
+    })
   };
 
   return JSON.stringify(schema);

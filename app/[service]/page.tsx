@@ -132,79 +132,242 @@ export default function ServicePage({ params }: ServicePageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: generateServiceSchema(service.name),
+          __html: generateServiceSchema(service.name, undefined, params.service),
         }}
       />
 
-      <ServiceHero
-        title={service.name}
-        description={service.description}
-      />
-
-      <section className="bg-gray-900 text-white py-12 md:py-16 lg:py-20">
-        <div className="prose prose-lg prose-invert mx-auto px-4">
-          <h2 className="text-white">Nos services de <span className="text-primary">{service.name}</span></h2>
-          <p className="text-white">{service.metaDescription}</p>
-          <ul className="text-gray-300">
-            {service.features.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
-        </div>
+      {/* Hero banner with image background - different from both home and location pages */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 opacity-50" style={{ 
+          backgroundImage: `url('/images/car-7291166_1280.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}></div>
+        <Container className="relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              {service.name}
+            </h1>
+            <p className="text-xl mb-8">
+              {service.description}
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Réserver maintenant</Link>
+            </Button>
+          </div>
+        </Container>
       </section>
 
-      <Features
-        title="Pourquoi choisir notre service"
-        description="Des prestations professionnelles adaptées à vos besoins"
-        features={features}
-      />
-
-      <ServicesGrid 
-        title="Nos Services"
-        description="Découvrez notre gamme complète de services de lavage et d'entretien automobile professionnel."
-      />
-
-      <Team 
-        description="Une équipe passionnée et expérimentée à votre service."
-        members={teamMembers}
-      />
-
-      <section className="bg-gray-900 text-white py-12 md:py-16 lg:py-20">
+      {/* Service features with cards - unique layout */}
+      <section className="py-16 bg-white">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Zones de <span className="text-primary">service</span>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Nos services de <span className="text-primary">{service.name}</span>
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Nous offrons nos services dans plusieurs villes de la région
+            <p className="text-lg text-gray-600">
+              {service.metaDescription}
             </p>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-gray-50 rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold mb-6 text-primary">Ce que nous proposons</h3>
+              <ul className="space-y-4">
+                {service.features.map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <svg className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-gray-900 text-white rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold mb-6">Pourquoi choisir notre service</h3>
+              <div className="space-y-6">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex">
+                    <div className="mr-4 text-primary">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg">{feature.title}</h4>
+                      <p className="text-gray-300 mt-1">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Process section - unique to service pages */}
+      <section className="py-16 bg-gray-50">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Notre processus de {service.name.toLowerCase()}
+            </h2>
+            <p className="text-lg text-gray-600">
+              Un service professionnel en plusieurs étapes pour des résultats impeccables
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Process timeline */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+            
+            <div className="space-y-12 relative">
+              {[
+                {
+                  title: "Évaluation initiale",
+                  description: "Nous examinons votre véhicule pour identifier les zones nécessitant une attention particulière."
+                },
+                {
+                  title: "Préparation",
+                  description: "Nous préparons les produits et équipements adaptés à votre type de véhicule."
+                },
+                {
+                  title: "Traitement professionnel",
+                  description: "Nous appliquons nos techniques professionnelles pour un nettoyage en profondeur."
+                },
+                {
+                  title: "Finition et contrôle qualité",
+                  description: "Nous vérifions chaque détail pour garantir un résultat impeccable."
+                }
+              ].map((step, index) => (
+                <div key={index} className={`md:flex items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+                  <div className="md:w-1/2 p-4">
+                    <div className={`bg-white p-6 rounded-lg shadow-md ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold mb-4">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                      <p className="text-gray-600">{step.description}</p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block md:w-1/2"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Team section with different layout */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Notre équipe d'experts
+            </h2>
+            <p className="text-lg text-gray-600">
+              Des professionnels passionnés et expérimentés à votre service
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold">{member.name}</h3>
+                <p className="text-primary font-medium">{member.role}</p>
+                <p className="text-gray-600 mt-2">{member.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Locations grid with different styling */}
+      <section className="py-16 bg-gray-900 text-white">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Où nous trouver
+            </h2>
+            <p className="text-lg text-gray-300">
+              Nous offrons notre service de {service.name.toLowerCase()} dans ces villes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {LOCATIONS.map((location) => (
               <Link
                 key={location.id}
-                href={`${SITE_CONFIG.url}/${service.id}/${location.id}`}
-                className="rounded-lg border border-gray-700 bg-gray-800 p-4 text-center shadow-sm transition-colors hover:border-primary hover:text-primary"
+                href={`/${service.id}/${location.id}`}
+                className="bg-gray-800 hover:bg-primary/20 border border-gray-700 hover:border-primary rounded-lg p-3 text-center transition-all"
               >
-                {location.name}
+                <span className="block text-sm font-medium">{location.name}</span>
               </Link>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-black to-gray-900 text-white">
+      {/* Other services section */}
+      <section className="py-16 bg-white">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Prêt à <span className="text-primary">redonner vie</span> à votre véhicule ?
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Nos autres services
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Contactez-nous dès maintenant pour réserver votre service
+            <p className="text-lg text-gray-600">
+              Découvrez notre gamme complète de services professionnels
             </p>
-            <div className="mt-8">
-              <Button asChild size="lg">
-                <Link href="/contact">Réserver maintenant</Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {SERVICES.filter(s => s.id !== service.id).map((otherService) => (
+              <Link 
+                key={otherService.id}
+                href={`/${otherService.id}`}
+                className="group"
+              >
+                <div className="bg-gray-50 rounded-lg p-6 transition-all group-hover:shadow-md">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary">{otherService.name}</h3>
+                  <p className="text-gray-600 mb-4">{otherService.description}</p>
+                  <span className="text-primary font-medium flex items-center">
+                    En savoir plus
+                    <svg className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA section with different design */}
+      <section className="py-16 bg-primary">
+        <Container>
+          <div className="md:flex items-center justify-between">
+            <div className="md:w-2/3 mb-8 md:mb-0">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Prêt à essayer notre service de {service.name.toLowerCase()} ?
+              </h2>
+              <p className="text-white/90 text-lg">
+                Contactez-nous dès maintenant pour réserver ou obtenir plus d'informations.
+              </p>
+            </div>
+            <div>
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                <Link href="/contact">
+                  Réserver maintenant
+                </Link>
               </Button>
             </div>
           </div>
