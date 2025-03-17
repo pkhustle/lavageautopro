@@ -8,18 +8,19 @@ import { Button } from '../../components/ui/button';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../lib/constants';
 import { generateServiceSchema } from '../../lib/seo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const teamMembers = [
   {
     name: "Jean Dupont",
     role: "Directeur",
-    description: "Plus de 15 ans d'expérience dans le détailing automobile de luxe.",
+    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
   },
   {
     name: "Marie Lambert",
-    role: "Chef d'équipe",
-    description: "Experte en restauration d'intérieur et traitement de cuir.",
+    role: "Chef d&apos;équipe",
+    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
   },
   {
@@ -264,7 +265,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              Notre équipe d'experts
+              Notre équipe d&apos;experts
             </h2>
             <p className="text-lg text-gray-600">
               Des professionnels passionnés et expérimentés à votre service
@@ -274,11 +275,12 @@ export default function ServicePage({ params }: ServicePageProps) {
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                  <img 
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 relative">
+                  <Image 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <h3 className="text-xl font-semibold">{member.name}</h3>
@@ -360,7 +362,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 Prêt à essayer notre service de {service.name.toLowerCase()} ?
               </h2>
               <p className="text-white/90 text-lg">
-                Contactez-nous dès maintenant pour réserver ou obtenir plus d'informations.
+                Contactez-nous dès maintenant pour réserver ou obtenir plus d&apos;informations.
               </p>
             </div>
             <div>

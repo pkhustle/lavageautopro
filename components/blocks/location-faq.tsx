@@ -34,12 +34,12 @@ const LOCATION_FAQS: LocationFAQs = {
       answer: "À Montréal, le sel utilisé sur les routes en hiver peut endommager les intérieurs en cuir. Nous utilisons des produits spécifiques pour nettoyer en profondeur et appliquer un protecteur qui crée une barrière contre le sel et les éléments abrasifs, prolongeant ainsi la durée de vie de vos sièges en cuir."
     },
     {
-      question: "Quels sont vos délais d'intervention à Montréal en haute saison?",
-      answer: "En haute saison (printemps et automne), nos délais d'intervention à Montréal sont généralement de 2 à 3 jours ouvrables. Nous vous recommandons de réserver à l'avance pour obtenir le créneau qui vous convient le mieux."
+      question: "Quels sont vos délais d&apos;intervention à Montréal en haute saison?",
+      answer: "En haute saison (printemps et automne), nos délais d&apos;intervention à Montréal sont généralement de 2 à 3 jours ouvrables. Nous vous recommandons de réserver à l&apos;avance pour obtenir le créneau qui vous convient le mieux."
     },
     {
       question: "Utilisez-vous des produits écologiques pour vos services à Montréal?",
-      answer: "Absolument! À Montréal, nous sommes particulièrement sensibles aux questions environnementales. Nous utilisons des produits biodégradables et écologiques qui sont efficaces tout en respectant l'environnement et la santé de nos clients."
+      answer: "Absolument! À Montréal, nous sommes particulièrement sensibles aux questions environnementales. Nous utilisons des produits biodégradables et écologiques qui sont efficaces tout en respectant l&apos;environnement et la santé de nos clients."
     }
   ],
   'quebec': [
@@ -56,18 +56,18 @@ const LOCATION_FAQS: LocationFAQs = {
       answer: "À Québec, les hivers sont particulièrement rigoureux. Nous utilisons des produits spécifiquement formulés pour éliminer les résidus de sel et de calcium, puis appliquons des protecteurs durables qui créent une barrière contre ces éléments corrosifs."
     },
     {
-      question: "Quels sont vos délais d'intervention à Québec?",
-      answer: "Nos délais d'intervention à Québec sont généralement de 1 à 2 jours ouvrables. Nous avons une équipe locale dédiée qui nous permet d'être réactifs même en période de forte demande."
+      question: "Quels sont vos délais d&apos;intervention à Québec?",
+      answer: "Nos délais d&apos;intervention à Québec sont généralement de 1 à 2 jours ouvrables. Nous avons une équipe locale dédiée qui nous permet d&apos;être réactifs même en période de forte demande."
     },
     {
       question: "Proposez-vous des forfaits spécifiques pour les résidents de Québec?",
-      answer: "Oui, nous avons développé des forfaits spécifiques adaptés aux besoins des résidents de Québec, prenant en compte les conditions climatiques locales et les habitudes d'utilisation des véhicules dans la région."
+      answer: "Oui, nous avons développé des forfaits spécifiques adaptés aux besoins des résidents de Québec, prenant en compte les conditions climatiques locales et les habitudes d&apos;utilisation des véhicules dans la région."
     }
   ],
   'laval': [
     {
       question: "Combien de temps prend un lavage intérieur complet à Laval?",
-      answer: "Pour un lavage intérieur complet à Laval, comptez entre 2 et 3 heures selon la taille du véhicule et son état. Notre équipe locale travaille efficacement pour minimiser le temps d'immobilisation de votre véhicule."
+      answer: "Pour un lavage intérieur complet à Laval, comptez entre 2 et 3 heures selon la taille du véhicule et son état. Notre équipe locale travaille efficacement pour minimiser le temps d&apos;immobilisation de votre véhicule."
     },
     {
       question: "Proposez-vous un service à domicile dans tous les quartiers de Laval?",
@@ -75,15 +75,15 @@ const LOCATION_FAQS: LocationFAQs = {
     },
     {
       question: "Comment protégez-vous les véhicules contre la pollution due à la proximité des autoroutes à Laval?",
-      answer: "À Laval, la proximité des grandes autoroutes expose les véhicules à davantage de particules polluantes. Nous utilisons des produits spécifiques pour éliminer ces particules et appliquons des protecteurs qui facilitent le nettoyage futur et préservent l'aspect de votre véhicule."
+      answer: "À Laval, la proximité des grandes autoroutes expose les véhicules à davantage de particules polluantes. Nous utilisons des produits spécifiques pour éliminer ces particules et appliquons des protecteurs qui facilitent le nettoyage futur et préservent l&apos;aspect de votre véhicule."
     },
     {
-      question: "Quels sont vos délais d'intervention à Laval?",
-      answer: "Nos délais d'intervention à Laval sont généralement de 1 à 2 jours ouvrables. Notre équipe locale nous permet d'être réactifs et flexibles pour répondre à vos besoins."
+      question: "Quels sont vos délais d&apos;intervention à Laval?",
+      answer: "Nos délais d&apos;intervention à Laval sont généralement de 1 à 2 jours ouvrables. Notre équipe locale nous permet d&apos;être réactifs et flexibles pour répondre à vos besoins."
     },
     {
       question: "Proposez-vous des services spécifiques pour les résidents de Laval?",
-      answer: "Oui, nous avons développé des services spécifiques pour les résidents de Laval, tenant compte des particularités locales comme la proximité des zones industrielles et des autoroutes qui peuvent affecter l'état de votre véhicule."
+      answer: "Oui, nous avons développé des services spécifiques pour les résidents de Laval, tenant compte des particularités locales comme la proximité des zones industrielles et des autoroutes qui peuvent affecter l&apos;état de votre véhicule."
     }
   ],
   // Default FAQs for other locations
@@ -101,12 +101,12 @@ const LOCATION_FAQS: LocationFAQs = {
       answer: "Nous utilisons des produits spécifiques pour nettoyer en profondeur et appliquer un protecteur qui crée une barrière contre les éléments abrasifs, prolongeant ainsi la durée de vie de vos sièges en cuir."
     },
     {
-      question: "Quels sont vos délais d'intervention?",
-      answer: "Nos délais d'intervention sont généralement de 2 à 3 jours ouvrables. Nous vous recommandons de réserver à l'avance pour obtenir le créneau qui vous convient le mieux."
+      question: "Quels sont vos délais d&apos;intervention?",
+      answer: "Nos délais d&apos;intervention sont généralement de 2 à 3 jours ouvrables. Nous vous recommandons de réserver à l&apos;avance pour obtenir le créneau qui vous convient le mieux."
     },
     {
       question: "Utilisez-vous des produits écologiques?",
-      answer: "Absolument! Nous utilisons des produits biodégradables et écologiques qui sont efficaces tout en respectant l'environnement et la santé de nos clients."
+      answer: "Absolument! Nous utilisons des produits biodégradables et écologiques qui sont efficaces tout en respectant l&apos;environnement et la santé de nos clients."
     }
   ]
 };
@@ -176,7 +176,7 @@ export function LocationFAQ({ locationName, serviceType }: LocationFAQProps) {
 
         <div className="mt-8 text-center">
           <p className="text-gray-600">
-            Vous avez d'autres questions sur nos services à {locationName}? N'hésitez pas à nous contacter.
+            Vous avez d&apos;autres questions sur nos services à {locationName}? N&apos;hésitez pas à nous contacter.
           </p>
         </div>
       </Container>

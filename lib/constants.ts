@@ -3,7 +3,7 @@ export const SERVICES = [
     id: 'lavage-auto-interieur',
     name: 'Lavage auto intérieur',
     description: 'Service professionnel de nettoyage intérieur de votre véhicule',
-    metaDescription: 'Service expert de lavage auto intérieur. Nettoyage professionnel et détaillé de l\'habitacle de votre véhicule.',
+    metaDescription: 'Service expert de lavage auto intérieur. Nettoyage professionnel et détaillé de l&apos;habitacle de votre véhicule.',
     features: [
       'Aspiration complète',
       'Nettoyage des surfaces',

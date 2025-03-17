@@ -106,7 +106,7 @@ export default function ServicesPage() {
     <>
       <Hero
         title="Nos Services de Lavage Automobile"
-        description="Découvrez notre gamme complète de services professionnels pour l'entretien et le nettoyage de votre véhicule."
+        description="Découvrez notre gamme complète de services professionnels pour l&apos;entretien et le nettoyage de votre véhicule."
         cta={{
           text: "Réserver maintenant",
           href: `${SITE_CONFIG.url}/contact`,
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       <section>
         <ServicesGrid 
           title="Tous nos services"
-          description="Explorez notre gamme complète de services professionnels pour l'entretien de votre véhicule."
+          description="Explorez notre gamme complète de services professionnels pour l&apos;entretien de votre véhicule."
           showAll={true}
         />
       </section>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
       <section>
         <Features
           title="Pourquoi choisir nos services"
-          description="Découvrez ce qui fait la différence dans notre approche du lavage et de l'entretien automobile."
+          description="Découvrez ce qui fait la différence dans notre approche du lavage et de l&apos;entretien automobile."
           features={serviceFeatures}
         />
       </section>

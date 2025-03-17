@@ -21,30 +21,30 @@ interface LocationTestimonials {
 const LOCATION_TESTIMONIALS: LocationTestimonials = {
   'montreal': [
     {
-      content: "J'ai fait appel à leur service de lavage intérieur pour ma BMW après un long hiver à Montréal. Le résultat était impeccable, toute trace de sel et de calcium a disparu. Je recommande vivement!",
+      content: "J&apos;ai fait appel à leur service de lavage intérieur pour ma BMW après un long hiver à Montréal. Le résultat était impeccable, toute trace de sel et de calcium a disparu. Je recommande vivement!",
       author: "Marc Tremblay",
       role: "Résident de Ville-Marie",
       vehicle: "BMW Série 3",
       rating: 5
     },
     {
-      content: "Service exceptionnel à Montréal! Ils ont complètement transformé l'intérieur de mon SUV qui avait souffert des conditions hivernales. Très professionnel et ponctuel.",
+      content: "Service exceptionnel à Montréal! Ils ont complètement transformé l&apos;intérieur de mon SUV qui avait souffert des conditions hivernales. Très professionnel et ponctuel.",
       author: "Sophie Lavoie",
       role: "Résidente du Plateau",
       vehicle: "Audi Q5",
       rating: 5
     },
     {
-      content: "Excellent rapport qualité-prix pour le nettoyage de ma voiture à Montréal. L'équipe est arrivée à l'heure et a fait un travail minutieux. Je ferai de nouveau appel à leurs services.",
+      content: "Excellent rapport qualité-prix pour le nettoyage de ma voiture à Montréal. L&apos;équipe est arrivée à l&apos;heure et a fait un travail minutieux. Je ferai de nouveau appel à leurs services.",
       author: "Jean-Philippe Côté",
-      role: "Résident d'Outremont",
+      role: "Résident d&apos;Outremont",
       vehicle: "Tesla Model 3",
       rating: 4
     }
   ],
   'quebec': [
     {
-      content: "Service impeccable à Québec! Mon véhicule n'avait jamais été aussi propre. L'équipe a pris le temps de s'occuper de chaque détail et le résultat est impressionnant.",
+      content: "Service impeccable à Québec! Mon véhicule n&apos;avait jamais été aussi propre. L&apos;équipe a pris le temps de s&apos;occuper de chaque détail et le résultat est impressionnant.",
       author: "Lucie Gagnon",
       role: "Résidente de Sainte-Foy",
       vehicle: "Honda CR-V",
@@ -58,7 +58,7 @@ const LOCATION_TESTIMONIALS: LocationTestimonials = {
       rating: 5
     },
     {
-      content: "J'utilise leurs services à Québec depuis plus d'un an maintenant et je suis toujours aussi satisfait. Professionnalisme et qualité sont au rendez-vous à chaque fois.",
+      content: "J&apos;utilise leurs services à Québec depuis plus d&apos;un an maintenant et je suis toujours aussi satisfait. Professionnalisme et qualité sont au rendez-vous à chaque fois.",
       author: "Marie-Ève Simard",
       role: "Résidente de Charlesbourg",
       vehicle: "Mazda CX-5",
@@ -67,23 +67,23 @@ const LOCATION_TESTIMONIALS: LocationTestimonials = {
   ],
   'laval': [
     {
-      content: "Service de qualité exceptionnelle à Laval. Mon véhicule avait grand besoin d'un nettoyage après un hiver rigoureux et le résultat a dépassé mes attentes.",
+      content: "Service de qualité exceptionnelle à Laval. Mon véhicule avait grand besoin d&apos;un nettoyage après un hiver rigoureux et le résultat a dépassé mes attentes.",
       author: "François Lemieux",
       role: "Résident de Chomedey",
       vehicle: "Toyota RAV4",
       rating: 5
     },
     {
-      content: "Très impressionné par le professionnalisme et l'efficacité de l'équipe à Laval. Ma voiture semble neuve à nouveau! Je recommande vivement leurs services.",
+      content: "Très impressionné par le professionnalisme et l&apos;efficacité de l&apos;équipe à Laval. Ma voiture semble neuve à nouveau! Je recommande vivement leurs services.",
       author: "Nathalie Bergeron",
       role: "Résidente de Vimont",
       vehicle: "Nissan Rogue",
       rating: 5
     },
     {
-      content: "J'ai fait appel à eux pour un nettoyage complet de mon véhicule à Laval et je ne suis pas déçu. Service rapide, efficace et résultat impeccable.",
+      content: "J&apos;ai fait appel à eux pour un nettoyage complet de mon véhicule à Laval et je ne suis pas déçu. Service rapide, efficace et résultat impeccable.",
       author: "Robert Paquette",
-      role: "Résident d'Auteuil",
+      role: "Résident d&apos;Auteuil",
       vehicle: "Ford Escape",
       rating: 4
     }
@@ -91,13 +91,13 @@ const LOCATION_TESTIMONIALS: LocationTestimonials = {
   // Default testimonials for other locations
   'default': [
     {
-      content: "Service exceptionnel! L'équipe a fait un travail remarquable sur l'intérieur de ma voiture. Je recommande vivement leurs services de nettoyage.",
+      content: "Service exceptionnel! L&apos;équipe a fait un travail remarquable sur l&apos;intérieur de ma voiture. Je recommande vivement leurs services de nettoyage.",
       author: "Client satisfait",
       role: "Propriétaire de véhicule",
       rating: 5
     },
     {
-      content: "Très professionnel et minutieux. Ma voiture n'a jamais été aussi propre. Je ferai certainement appel à leurs services à nouveau.",
+      content: "Très professionnel et minutieux. Ma voiture n&apos;a jamais été aussi propre. Je ferai certainement appel à leurs services à nouveau.",
       author: "Client régulier",
       role: "Propriétaire de véhicule",
       rating: 5
@@ -164,7 +164,7 @@ export function LocationTestimonials({ locationName }: LocationTestimonialsProps
               </div>
               
               {/* Testimonial content */}
-              <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+              <p className="text-gray-300 mb-4">&quot;{testimonial.content}&quot;</p>
               
               {/* Author info */}
               <div className="mt-6">

@@ -83,13 +83,13 @@ const teamMembers = [
   {
     name: "Jean Dupont",
     role: "Directeur",
-    description: "Plus de 15 ans d'expérience dans le détailing automobile de luxe.",
+    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
   },
   {
     name: "Marie Lambert",
-    role: "Chef d'équipe",
-    description: "Experte en restauration d'intérieur et traitement de cuir.",
+    role: "Chef d&apos;équipe",
+    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
   },
   {
@@ -105,7 +105,7 @@ export default function Home() {
     <>
       <Hero
         title="Service professionnel de lavage automobile"
-        description="Redonnez à votre véhicule son éclat d'origine avec nos services de nettoyage professionnel. Une équipe expérimentée et des résultats garantis."
+        description="Redonnez à votre véhicule son éclat d&apos;origine avec nos services de nettoyage professionnel. Une équipe expérimentée et des résultats garantis."
         cta={{
           text: "Réserver maintenant",
           href: `${SITE_CONFIG.url}/contact`,
@@ -122,7 +122,7 @@ export default function Home() {
 
       <section>
         <Features
-          title="L'excellence au service de votre véhicule"
+          title="L&apos;excellence au service de votre véhicule"
           description="Des services professionnels adaptés à vos besoins avec une garantie de satisfaction."
           features={homeFeatures}
           columns={4}

@@ -35,11 +35,11 @@ const LOCATION_DATA: LocationData = {
     challenges: [
       { 
         title: 'Dommages dus au sel', 
-        description: 'Les routes salées en hiver peuvent causer de la corrosion et des taches sur l\'extérieur et l\'intérieur de votre véhicule.'
+        description: 'Les routes salées en hiver peuvent causer de la corrosion et des taches sur l&apos;extérieur et l&apos;intérieur de votre véhicule.'
       },
       { 
         title: 'Pollution urbaine', 
-        description: 'La pollution urbaine peut s\'accumuler sur la carrosserie et s\'infiltrer dans l\'habitacle, nécessitant un nettoyage régulier.'
+        description: 'La pollution urbaine peut s&apos;accumuler sur la carrosserie et s&apos;infiltrer dans l&apos;habitacle, nécessitant un nettoyage régulier.'
       }
     ]
   },
@@ -56,11 +56,11 @@ const LOCATION_DATA: LocationData = {
     challenges: [
       { 
         title: 'Conditions hivernales rigoureuses', 
-        description: 'Les hivers rigoureux de Québec peuvent laisser des résidus de sel et de calcium qui endommagent l\'intérieur et l\'extérieur de votre véhicule.'
+        description: 'Les hivers rigoureux de Québec peuvent laisser des résidus de sel et de calcium qui endommagent l&apos;intérieur et l&apos;extérieur de votre véhicule.'
       },
       { 
         title: 'Pollen et allergènes', 
-        description: 'Au printemps et en été, le pollen peut s\'accumuler dans votre véhicule, affectant la qualité de l\'air intérieur.'
+        description: 'Au printemps et en été, le pollen peut s&apos;accumuler dans votre véhicule, affectant la qualité de l&apos;air intérieur.'
       }
     ]
   },
@@ -81,7 +81,7 @@ const LOCATION_DATA: LocationData = {
       },
       { 
         title: 'Zones de construction', 
-        description: 'Les nombreux chantiers de construction peuvent générer de la poussière qui s\'accumule sur et dans votre véhicule.'
+        description: 'Les nombreux chantiers de construction peuvent générer de la poussière qui s&apos;accumule sur et dans votre véhicule.'
       }
     ]
   },
@@ -98,7 +98,7 @@ const LOCATION_DATA: LocationData = {
     challenges: [
       { 
         title: 'Conditions climatiques', 
-        description: 'Les variations climatiques du Québec peuvent affecter l\'état de votre véhicule, tant à l\'intérieur qu\'à l\'extérieur.'
+        description: 'Les variations climatiques du Québec peuvent affecter l&apos;état de votre véhicule, tant à l&apos;intérieur qu&apos;à l&apos;extérieur.'
       },
       { 
         title: 'Entretien régulier', 

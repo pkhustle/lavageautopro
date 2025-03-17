@@ -93,7 +93,7 @@ export function LocationMap({ locationName, serviceType }: LocationMapProps) {
 
         <div className="mt-8 text-center">
           <p className="text-gray-600">
-            Besoin de nos services à {locationName}? Contactez-nous dès aujourd'hui pour planifier votre rendez-vous.
+            Besoin de nos services à {locationName}? Contactez-nous dès aujourd&apos;hui pour planifier votre rendez-vous.
           </p>
         </div>
       </Container>

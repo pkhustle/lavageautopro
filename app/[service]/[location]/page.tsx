@@ -14,6 +14,7 @@ import { Button } from '../../../components/ui/button';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -247,11 +248,12 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                <div className="h-64 overflow-hidden">
-                  <img 
+                <div className="h-64 overflow-hidden relative">
+                  <Image 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-6">
