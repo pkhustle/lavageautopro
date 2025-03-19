@@ -15,18 +15,19 @@ import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageCarousel } from '../../../components/blocks/image-carousel';
 
 const teamMembers = [
   {
     name: "Jean Dupont",
     role: "Directeur",
-    description: "Plus de 15 ans d'expérience dans le détailing automobile de luxe.",
+    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
   },
   {
     name: "Marie Lambert",
-    role: "Chef d'équipe",
-    description: "Experte en restauration d'intérieur et traitement de cuir.",
+    role: "Chef d&apos;équipe",
+    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
   },
   {
@@ -136,25 +137,54 @@ export default function LocationServicePage({ params }: LocationServicePageProps
   
   if (!service || !location) return notFound();
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: generateServiceSchema(service.name, location.name, params.service, params.location),
-        }}
-      />
-      
-      <LocationFAQSchema 
-        locationName={location.name}
-        serviceType={service.name}
-        serviceId={params.service}
-        locationId={params.location}
-      />
+  // Determine section order based on location ID
+  // This creates a unique layout for each location
+  const getSectionOrder = (locationId: string) => {
+    // Create a hash from the location ID to get a consistent but unique order
+    const hash = locationId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    
+    // Define all sections
+    const sections = [
+      'hero',
+      'locationInfo',
+      'testimonials',
+      'pricing',
+      'features',
+      'faq',
+      'team',
+      'otherServices',
+      'cta'
+    ];
+    
+    // Shuffle the sections (except hero which always stays first)
+    const heroSection = sections.shift();
+    const shuffledSections = [...sections];
+    
+    // Use the hash to create a deterministic shuffle
+    for (let i = shuffledSections.length - 1; i > 0; i--) {
+      const j = (hash + i) % (i + 1);
+      [shuffledSections[i], shuffledSections[j]] = [shuffledSections[j], shuffledSections[i]];
+    }
+    
+    // Return the ordered sections with hero always first
+    return [heroSection, ...shuffledSections];
+  };
 
-      {/* Two-column hero section - completely different from home page */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 md:py-24">
-        <Container>
+  const sectionOrder = getSectionOrder(location.id);
+
+  // Define all sections as components
+  const sections = {
+    hero: (
+      <section key="hero" className="relative text-white py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-90 z-0"></div>
+        <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center" 
+          style={{ 
+            backgroundImage: `url('https://source.unsplash.com/1600x900/?${location.name},city,landmark')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}>
+        </div>
+        <Container className="relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -176,26 +206,32 @@ export default function LocationServicePage({ params }: LocationServicePageProps
               </div>
             </div>
             <div className="rounded-lg overflow-hidden shadow-2xl">
-              <LocationMap 
-                locationName={location.name}
-                serviceType={service.name}
-              />
+              <div className="relative" style={{ height: '300px' }}>
+                <ImageCarousel className="w-full h-full" imageCount={3} />
+              </div>
             </div>
           </div>
         </Container>
       </section>
-
-      {/* Location info with statistics - unique to location pages */}
+    ),
+    
+    locationInfo: (
       <LocationInfo 
+        key="locationInfo"
         locationName={location.name}
         serviceType={service.name}
       />
-
-      {/* Testimonials with dark background - different styling from home */}
-      <LocationTestimonials locationName={location.name} />
-
-      {/* Price estimator with location-specific ID for anchor */}
-      <section id="tarifs" className="bg-white py-16">
+    ),
+    
+    testimonials: (
+      <LocationTestimonials 
+        key="testimonials"
+        locationName={location.name} 
+      />
+    ),
+    
+    pricing: (
+      <section key="pricing" id="tarifs" className="bg-white py-16">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Tarifs à {location.name}</h2>
@@ -206,9 +242,10 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           <PriceEstimator />
         </Container>
       </section>
-
-      {/* Features with different styling */}
-      <section className="bg-gray-50 py-16">
+    ),
+    
+    features: (
+      <section key="features" className="bg-gray-50 py-16">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Avantages de notre service à {location.name}</h2>
@@ -229,15 +266,18 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           </div>
         </Container>
       </section>
-
-      {/* FAQ section */}
+    ),
+    
+    faq: (
       <LocationFAQ 
+        key="faq"
         locationName={location.name}
         serviceType={service.name}
       />
-
-      {/* Team section with location-specific description */}
-      <section className="bg-gray-900 text-white py-16">
+    ),
+    
+    team: (
+      <section key="team" className="bg-gray-900 text-white py-16">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white">Notre équipe à {location.name}</h2>
@@ -266,9 +306,10 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           </div>
         </Container>
       </section>
-
-      {/* Other services section - styled differently */}
-      <section className="bg-white py-16">
+    ),
+    
+    otherServices: (
+      <section key="otherServices" className="bg-white py-16">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Autres services disponibles à {location.name}</h2>
@@ -296,9 +337,10 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           </div>
         </Container>
       </section>
-
-      {/* CTA section with different design */}
-      <section className="relative py-20 overflow-hidden">
+    ),
+    
+    cta: (
+      <section key="cta" className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-600 opacity-90"></div>
         <div className="absolute inset-0 opacity-20" style={{ 
           backgroundImage: `url('/images/wash-5144822_1280.jpg')`,
@@ -331,6 +373,28 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           </div>
         </Container>
       </section>
+    )
+  };
+
+  // Render the sections in the determined order
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateServiceSchema(service.name, location.name, params.service, params.location),
+        }}
+      />
+      
+      <LocationFAQSchema 
+        locationName={location.name}
+        serviceType={service.name}
+        serviceId={params.service}
+        locationId={params.location}
+      />
+
+      {/* Render sections in the determined order */}
+      {sectionOrder.map(sectionName => sections[sectionName as keyof typeof sections])}
     </>
   );
 }

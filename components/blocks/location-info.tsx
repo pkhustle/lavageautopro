@@ -137,7 +137,9 @@ export function LocationInfo({ locationName, serviceType }: LocationInfoProps) {
           {/* Service Areas */}
           <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Zones desservies à {locationName}
+              <span className="txt-primary">
+                Notre zone de service à {locationName}
+              </span>
             </h3>
             <ul className="space-y-2 text-gray-600">
               {data.neighborhoods.map((neighborhood, index) => (
