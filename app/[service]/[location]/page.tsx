@@ -131,6 +131,72 @@ const locationFeatures = [
   },
 ];
 
+const GSC_OPPORTUNITY_COPY: Record<string, Record<string, {
+  title: string;
+  intro: string;
+  bullets: string[];
+}>> = {
+  'lave-auto-a-la-main': {
+    repentigny: {
+      title: 'Lave-auto à la main, cirage et polissage à Repentigny',
+      intro: 'Les recherches Google montrent une demande locale pour le cirage auto, le polissage auto et la remise à neuf de véhicule à Repentigny. Cette page répond directement à ces besoins avec un service minutieux, adapté aux véhicules utilisés au quotidien.',
+      bullets: [
+        'Cirage et protection de peinture pour aider à conserver le lustre du véhicule.',
+        'Polissage esthétique pour améliorer l’apparence des micro-rayures légères.',
+        'Remise à neuf intérieure et extérieure selon l’état réel du véhicule.',
+      ],
+    },
+    sherbrooke: {
+      title: 'Lavage auto et nettoyage intérieur à Sherbrooke',
+      intro: 'À Sherbrooke, les recherches portent autant sur le lavage auto que sur le nettoyage intérieur, le nettoyage à domicile et les services près de chez soi. Notre service cible ces besoins avec une prise en charge claire et flexible.',
+      bullets: [
+        'Nettoyage intérieur des tapis, sièges, plastiques et surfaces fréquemment touchées.',
+        'Lavage à la main pour une finition soignée sans approche industrielle impersonnelle.',
+        'Service pensé pour les clients qui comparent les options de lavage auto à Sherbrooke.',
+      ],
+    },
+    mirabel: {
+      title: 'Lave-auto à la main à Mirabel',
+      intro: 'Mirabel ressort comme une opportunité forte dans Search Console pour les recherches de lave-auto à la main et de lavage auto intérieur et extérieur. La page met donc l’accent sur la qualité, la finition et le service local.',
+      bullets: [
+        'Lavage à la main avec attention aux détails visibles: carrosserie, jantes et finition.',
+        'Options de nettoyage intérieur et extérieur selon le besoin du véhicule.',
+        'Contenu local optimisé pour les clients qui cherchent un lave-auto à Mirabel.',
+      ],
+    },
+    magog: {
+      title: 'Lave-auto à la main à Magog',
+      intro: 'Magog est déjà près de la première page pour certaines requêtes. Cette page renforce les signaux locaux, les réponses rapides et les détails de service pour convertir cette visibilité en clics.',
+      bullets: [
+        'Réponse claire aux recherches de lave-auto à la main à Magog.',
+        'Explication du processus pour aider les visiteurs et les moteurs de réponse.',
+        'Appels à l’action locaux pour demander un service ou un devis.',
+      ],
+    },
+    alma: {
+      title: 'Lave-auto à la main à Alma',
+      intro: 'Alma affiche une position moyenne proche de la première page dans GSC. Le contenu doit donc aider Google à comprendre le service, la zone desservie et les raisons de choisir Lavage Auto Pro.',
+      bullets: [
+        'Positionnement local clair pour les recherches de lave-auto à Alma.',
+        'Informations utiles sur le lavage, la finition et la protection du véhicule.',
+        'Liens internes vers les autres services automobiles pertinents.',
+      ],
+    },
+  },
+};
+
+function getOpportunityCopy(serviceId: string, locationId: string, serviceName: string, locationName: string) {
+  return GSC_OPPORTUNITY_COPY[serviceId]?.[locationId] || {
+    title: `${serviceName} à ${locationName}: service local et résultats soignés`,
+    intro: `Notre service de ${serviceName.toLowerCase()} à ${locationName} aide les automobilistes à garder un véhicule propre, confortable et agréable à conduire. Nous misons sur des méthodes professionnelles, des produits adaptés et une finition attentive.`,
+    bullets: [
+      `Service local de ${serviceName.toLowerCase()} pour les conducteurs de ${locationName}.`,
+      'Nettoyage adapté à l’état du véhicule et aux besoins réels du client.',
+      'Réservation simple avec une approche axée sur la satisfaction.',
+    ],
+  };
+}
+
 export default function LocationServicePage({ params }: LocationServicePageProps) {
   const service = SERVICES.find((s) => s.id === params.service);
   const location = LOCATIONS.find((l) => l.id === params.location);
@@ -171,6 +237,7 @@ export default function LocationServicePage({ params }: LocationServicePageProps
   };
 
   const sectionOrder = getSectionOrder(location.id);
+  const opportunityCopy = getOpportunityCopy(service.id, location.id, service.name, location.name);
 
   // Define all sections as components
   const sections = {
@@ -221,6 +288,34 @@ export default function LocationServicePage({ params }: LocationServicePageProps
         locationName={location.name}
         serviceType={service.name}
       />
+    ),
+
+    localOpportunity: (
+      <section key="localOpportunity" className="bg-white py-16">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+              Réponse locale
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900">
+              {opportunityCopy.title}
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              {opportunityCopy.intro}
+            </p>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {opportunityCopy.bullets.map((bullet) => (
+                <div key={bullet} className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+                  <svg className="mb-3 h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p className="text-sm leading-6 text-gray-700">{bullet}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
     ),
     
     testimonials: (
@@ -393,8 +488,11 @@ export default function LocationServicePage({ params }: LocationServicePageProps
         locationId={params.location}
       />
 
-      {/* Render sections in the determined order */}
-      {sectionOrder.map(sectionName => sections[sectionName as keyof typeof sections])}
+      {sections.hero}
+      {sections.localOpportunity}
+      {sectionOrder
+        .filter(sectionName => sectionName !== 'hero')
+        .map(sectionName => sections[sectionName as keyof typeof sections])}
     </>
   );
 }

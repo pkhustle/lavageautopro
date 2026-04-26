@@ -39,7 +39,7 @@ export function generateMetadata({
       description: finalDescription,
       type: 'website',
       locale: 'fr_CA',
-      url: SITE_CONFIG.url,
+      url: path ? `${SITE_CONFIG.url}/${path}` : SITE_CONFIG.url,
       siteName: SITE_CONFIG.name,
     },
     alternates: {
@@ -55,8 +55,8 @@ export function generateMetadata({
 
 export function generateLocationMetadata(service: string, location: string, serviceId: string, locationId: string) {
   const title = `${service} à ${location}`;
-  const description = `Service professionnel de ${service.toLowerCase()} à ${location}. Expertise locale, satisfaction garantie. Réservez maintenant!`;
-  const keywords = `${service}, ${location}, lavage auto, detailing, nettoyage voiture, service automobile ${location}, lavage voiture ${location}`;
+  const description = `Service professionnel de ${service.toLowerCase()} à ${location}. Nettoyage auto local, tarifs clairs, service mobile et satisfaction garantie.`;
+  const keywords = `${service}, ${location}, lavage auto, détailing, nettoyage voiture, service automobile ${location}, lavage voiture ${location}`;
 
   return generateMetadata({
     title,
@@ -108,4 +108,66 @@ export function generateServiceSchema(service: string, location?: string, servic
   };
 
   return JSON.stringify(schema);
+}
+
+export function generateLocalBusinessSchema() {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'AutoRepair',
+    '@id': `${SITE_CONFIG.url}/#business`,
+    name: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
+    image: `${SITE_CONFIG.url}/images/auto-2179220_1280.jpg`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: CONTACT_INFO.address,
+      addressLocality: CONTACT_INFO.city,
+      addressRegion: CONTACT_INFO.province,
+      postalCode: CONTACT_INFO.postalCode,
+      addressCountry: 'CA',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '46.8649',
+      longitude: '-71.2173',
+    },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Québec',
+    },
+    priceRange: '$$',
+    openingHours: [
+      'Mo-Fr 08:00-18:00',
+      'Sa 09:00-17:00',
+    ],
+    sameAs: [],
+  });
+}
+
+export function generateWebsiteSchema() {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_CONFIG.url}/#website`,
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.url,
+    inLanguage: 'fr-CA',
+    publisher: {
+      '@id': `${SITE_CONFIG.url}/#business`,
+    },
+  });
+}
+
+export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  });
 }

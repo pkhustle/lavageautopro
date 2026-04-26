@@ -25,7 +25,7 @@ export function Header() {
   }, []);
 
   const navigation = [
-    { name: 'Acceuil', href: `${SITE_CONFIG.url}/` },
+    { name: 'Accueil', href: `${SITE_CONFIG.url}/` },
     { name: 'Services', href: '#', dropdown: true },
     { name: 'Nous contacter', href: `${SITE_CONFIG.url}/contact` },
     { name: 'FAQ', href: `${SITE_CONFIG.url}/#faq` },

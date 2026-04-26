@@ -11,6 +11,7 @@ import { Container } from '../components/ui/container';
 import { Button } from '../components/ui/button';
 import Link from 'next/link';
 import { SITE_CONFIG } from '../lib/constants';
+import { generateLocalBusinessSchema, generateWebsiteSchema } from '../lib/seo';
 
 export const metadata = {
   title: SITE_CONFIG.defaultTitle,
@@ -103,6 +104,14 @@ const teamMembers = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateLocalBusinessSchema() }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateWebsiteSchema() }}
+      />
       <Hero
         title="Service professionnel de lavage automobile"
         description="Redonnez à votre véhicule son éclat d&apos;origine avec nos services de nettoyage professionnel. Une équipe expérimentée et des résultats garantis."

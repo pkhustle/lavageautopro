@@ -6,7 +6,7 @@ import { ServicesGrid } from '../../components/blocks/services-grid';
 import { Container } from '../../components/ui/container';
 import { Button } from '../../components/ui/button';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../lib/constants';
-import { generateServiceSchema } from '../../lib/seo';
+import { generateBreadcrumbSchema, generateServiceSchema } from '../../lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -48,12 +48,13 @@ export async function generateMetadata({ params }: ServicePageProps) {
   if (!service) return {};
 
   return {
-    title: service.name,
+    title: `${service.name} professionnel au Québec | ${SITE_CONFIG.name}`,
     description: service.metaDescription,
     keywords: `${service.name}, lavage auto, nettoyage voiture, service automobile`,
     openGraph: {
-      title: service.name,
+      title: `${service.name} professionnel au Québec | ${SITE_CONFIG.name}`,
       description: service.metaDescription,
+      url: `${SITE_CONFIG.url}/${params.service}`,
     },
     alternates: {
       canonical: `${SITE_CONFIG.url}/${params.service}`,
@@ -134,6 +135,15 @@ export default function ServicePage({ params }: ServicePageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: generateServiceSchema(service.name, undefined, params.service),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbSchema([
+            { name: 'Accueil', url: SITE_CONFIG.url },
+            { name: service.name, url: `${SITE_CONFIG.url}/${params.service}` },
+          ]),
         }}
       />
 

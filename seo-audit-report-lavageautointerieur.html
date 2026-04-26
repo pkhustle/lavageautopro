@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEO, GSC & AIO Audit - lavageautointerieur.ca</title>
+    <style>
+      :root {
+        --ink: #162033;
+        --muted: #647083;
+        --line: #dbe3ee;
+        --paper: #f6f8fb;
+        --panel: #ffffff;
+        --navy: #17233f;
+        --blue: #2563eb;
+        --cyan: #0891b2;
+        --green: #16a34a;
+        --amber: #d97706;
+        --red: #dc2626;
+        --shadow: 0 22px 60px rgba(22, 32, 51, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        color: white;
+        background:
+          linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(23, 35, 63, 0.88)),
+          url("https://www.lavageautointerieur.ca/_next/image?url=%2Fimages%2Fauto-2179220_1280.jpg&w=1920&q=75")
+            center / cover;
+        padding: 56px 24px 44px;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        color: #bfdbfe;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.08;
+      }
+
+      h1 {
+        max-width: 860px;
+        margin-top: 18px;
+        font-size: clamp(38px, 7vw, 78px);
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 780px;
+        margin: 20px 0 0;
+        color: #d8e5f7;
+        font-size: 18px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 32px;
+        align-items: end;
+      }
+
+      .score-card {
+        align-self: stretch;
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(16px);
+      }
+
+      .score {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .score strong {
+        font-size: 74px;
+        line-height: 0.95;
+      }
+
+      .score span {
+        color: #cbd5e1;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .verdict {
+        display: inline-flex;
+        margin-top: 18px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: #fff7ed;
+        background: rgba(217, 119, 6, 0.28);
+        font-weight: 800;
+      }
+
+      main {
+        padding: 34px 0 72px;
+      }
+
+      section {
+        margin-top: 28px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .grid.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 12px 30px rgba(22, 32, 51, 0.06);
+      }
+
+      .panel.pad {
+        padding: 24px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 16px;
+      }
+
+      h2 {
+        font-size: clamp(26px, 4vw, 42px);
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .section-head p,
+      .muted {
+        color: var(--muted);
+      }
+
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: -32px;
+      }
+
+      .kpi {
+        padding: 18px;
+      }
+
+      .kpi small {
+        display: block;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .kpi strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 26px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .pill.critical {
+        color: #7f1d1d;
+        background: #fee2e2;
+      }
+
+      .pill.high {
+        color: #7c2d12;
+        background: #ffedd5;
+      }
+
+      .pill.medium {
+        color: #713f12;
+        background: #fef3c7;
+      }
+
+      .pill.good {
+        color: #14532d;
+        background: #dcfce7;
+      }
+
+      .pill.info {
+        color: #1e3a8a;
+        background: #dbeafe;
+      }
+
+      .finding {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .finding + .finding {
+        border-top: 1px solid var(--line);
+      }
+
+      .finding p {
+        margin: 8px 0 0;
+      }
+
+      .evidence {
+        margin-top: 12px;
+        padding: 12px 14px;
+        border-left: 4px solid var(--blue);
+        border-radius: 6px;
+        color: #334155;
+        background: #f1f5f9;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          monospace;
+        font-size: 13px;
+      }
+
+      .bars {
+        display: grid;
+        gap: 12px;
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 160px 1fr 52px;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .bar {
+        height: 12px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #e2e8f0;
+      }
+
+      .bar > span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--blue), var(--cyan));
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 8px;
+        background: white;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: #334155;
+        background: #eef3f8;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .timeline {
+        counter-reset: step;
+      }
+
+      .step {
+        position: relative;
+        padding: 20px 20px 20px 70px;
+      }
+
+      .step + .step {
+        border-top: 1px solid var(--line);
+      }
+
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        display: grid;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        border-radius: 50%;
+        color: white;
+        background: var(--navy);
+        font-weight: 900;
+      }
+
+      .callout {
+        padding: 22px;
+        border: 1px solid #bae6fd;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #eff6ff, #ecfeff);
+      }
+
+      .print-note {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .grid.cols-3,
+        .grid.cols-2,
+        .kpis {
+          grid-template-columns: 1fr;
+        }
+
+        .kpis {
+          margin-top: 16px;
+        }
+
+        .finding,
+        .bar-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .hero {
+          background: var(--navy) !important;
+          print-color-adjust: exact;
+        }
+
+        .panel {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">SEO, GSC & AIO audit</div>
+          <h1>lavageautointerieur.ca</h1>
+          <p>
+            Evidence-backed audit for a Quebec automotive detailing website.
+            Scope includes crawlability, canonical signals, on-page SEO, schema,
+            local SEO, AI Overviews readiness, and a GSC measurement plan.
+          </p>
+        </div>
+        <aside class="score-card">
+          <div class="eyebrow">Overall SEO health</div>
+          <div class="score"><strong>61</strong><span>/100</span></div>
+          <div class="verdict">Priority: fix indexation signals first</div>
+          <p>
+            The site is fast to respond and has many localized landing pages,
+            but search engines receive conflicting canonical and crawl signals.
+          </p>
+        </aside>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="kpis">
+        <div class="panel kpi">
+          <small>Audited URL</small>
+          <strong>www.lavageautointerieur.ca</strong>
+        </div>
+        <div class="panel kpi">
+          <small>GSC impressions, 90d</small>
+          <strong>3,961</strong>
+        </div>
+        <div class="panel kpi">
+          <small>GSC clicks, 90d</small>
+          <strong>32</strong>
+        </div>
+        <div class="panel kpi">
+          <small>GSC CTR / avg position</small>
+          <strong>0.81% / 56.1</strong>
+        </div>
+      </div>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Executive Summary</h2>
+            <p>
+              The site has a solid Next.js foundation, clear service intent,
+              and broad local page coverage. The main risk is not content volume;
+              it is inconsistent technical signaling.
+            </p>
+          </div>
+        </div>
+        <div class="grid cols-3">
+          <div class="panel pad">
+            <span class="pill critical">Critical</span>
+            <h3 style="margin-top: 14px">Robots file is missing</h3>
+            <p class="muted">
+              <code>/robots.txt</code> returns a 404 HTML page instead of a
+              plain crawl directive file. This weakens discovery and makes the
+              sitemap harder for crawlers to trust.
+            </p>
+          </div>
+          <div class="panel pad">
+            <span class="pill critical">Critical</span>
+            <h3 style="margin-top: 14px">Canonicals conflict with redirects</h3>
+            <p class="muted">
+              Production redirects non-www to www, but canonicals and sitemap
+              URLs point to non-www. Google can resolve this, but it wastes crawl
+              clarity and splits signals.
+            </p>
+          </div>
+          <div class="panel pad">
+            <span class="pill high">High</span>
+            <h3 style="margin-top: 14px">AIO/GEO readiness is underbuilt</h3>
+            <p class="muted">
+              The homepage lacks structured data and no <code>llms.txt</code>
+              exists. AI answer engines need extractable facts, entity clarity,
+              FAQs, and authoritative citations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Score Breakdown</h2>
+            <p>Weighted using the installed SEO audit skill rubric.</p>
+          </div>
+        </div>
+        <div class="panel pad bars">
+          <div class="bar-row">
+            <strong>Technical SEO</strong>
+            <div class="bar"><span style="width: 55%"></span></div>
+            <span>55</span>
+          </div>
+          <div class="bar-row">
+            <strong>Content Quality</strong>
+            <div class="bar"><span style="width: 64%"></span></div>
+            <span>64</span>
+          </div>
+          <div class="bar-row">
+            <strong>On-page SEO</strong>
+            <div class="bar"><span style="width: 70%"></span></div>
+            <span>70</span>
+          </div>
+          <div class="bar-row">
+            <strong>Schema</strong>
+            <div class="bar"><span style="width: 60%"></span></div>
+            <span>60</span>
+          </div>
+          <div class="bar-row">
+            <strong>Performance</strong>
+            <div class="bar"><span style="width: 70%"></span></div>
+            <span>70</span>
+          </div>
+          <div class="bar-row">
+            <strong>Images</strong>
+            <div class="bar"><span style="width: 72%"></span></div>
+            <span>72</span>
+          </div>
+          <div class="bar-row">
+            <strong>AI Search Readiness</strong>
+            <div class="bar"><span style="width: 40%"></span></div>
+            <span>40</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Evidence-Based Findings</h2>
+            <p>Findings are labeled by impact and confidence.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <article class="finding">
+            <div><span class="pill critical">Critical</span></div>
+            <div>
+              <h3>Serve a real robots.txt file</h3>
+              <p>
+                Googlebot can still crawl without a robots file, but a missing
+                robots file is a poor crawl management signal, especially for a
+                site with 206 sitemap URLs and many templated local pages.
+              </p>
+              <div class="evidence">
+                GET https://www.lavageautointerieur.ca/robots.txt -> HTTP 404,
+                content-type text/html; x-matched-path: /[service]
+              </div>
+              <p>
+                <strong>Fix:</strong> add <code>public/robots.txt</code> or
+                <code>app/robots.ts</code> with allowed crawling and a sitemap
+                line pointing to the canonical sitemap URL.
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill critical">Critical</span></div>
+            <div>
+              <h3>Align canonical domain, sitemap, and redirects</h3>
+              <p>
+                Every sampled sitemap URL uses <code>https://lavageautointerieur.ca</code>,
+                but production redirects that host to <code>www</code>. Live
+                pages then declare non-www canonicals. Choose one canonical host.
+              </p>
+              <div class="evidence">
+                https://lavageautointerieur.ca/ -> 308 -> https://www.lavageautointerieur.ca/
+                while homepage canonical is https://lavageautointerieur.ca
+              </div>
+              <p>
+                <strong>Fix:</strong> either stop redirecting to www, or update
+                <code>SITE_CONFIG.url</code>, canonical generation, Open Graph URLs,
+                and sitemap generation to use <code>https://www.lavageautointerieur.ca</code>.
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill high">High</span></div>
+            <div>
+              <h3>Add homepage and contact structured data</h3>
+              <p>
+                Service and location pages output JSON-LD, but homepage,
+                services index, and contact page have no JSON-LD. Local service
+                businesses should make identity, address, service area, hours,
+                and contact data machine-readable.
+              </p>
+              <div class="evidence">
+                Homepage JSON-LD count: 0. Contact page JSON-LD count: 0.
+                Service page JSON-LD count: 2. Location page JSON-LD count: 6.
+              </div>
+              <p>
+                <strong>Fix:</strong> add Organization/LocalBusiness schema sitewide,
+                WebSite schema on the homepage, BreadcrumbList on key pages, and
+                Service schema for the services overview.
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill high">High</span></div>
+            <div>
+              <h3>Strengthen titles for commercial intent</h3>
+              <p>
+                Several service titles are very short and omit brand, location,
+                or buyer modifiers. This is a missed CTR and relevance opportunity.
+              </p>
+              <div class="evidence">
+                /lavage-auto-interieur title length: 21. /lave-auto-a-la-main
+                title length: 19. Homepage title length: 62.
+              </div>
+              <p>
+                <strong>Fix:</strong> use templates like
+                "Lavage auto intérieur à domicile au Québec | Lavage Auto Pro"
+                and "Lave-auto à la main professionnel | Québec".
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill medium">Medium</span></div>
+            <div>
+              <h3>Fix escaped apostrophes in metadata</h3>
+              <p>
+                Some meta descriptions output <code>&amp;amp;apos;</code> instead
+                of a normal apostrophe. This can look unpolished in snippets and
+                signals that metadata is being escaped twice.
+              </p>
+              <div class="evidence">
+                Service description includes "d&amp;amp;apos;entretien" and
+                "l&amp;amp;apos;habitacle" in rendered meta content.
+              </div>
+              <p>
+                <strong>Fix:</strong> store plain apostrophes in constants, not
+                HTML entities, and let React/Next escape output.
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill medium">Medium</span></div>
+            <div>
+              <h3>Improve local page uniqueness and French localization</h3>
+              <p>
+                The site generates 200 service-location pages. This can work, but
+                it needs unique local proof to avoid doorway-page patterns.
+              </p>
+              <div class="evidence">
+                Sample H1: "Lavage auto intérieur à Montreal". Sitemap contains
+                206 URLs. Location constants normalize accents away.
+              </div>
+              <p>
+                <strong>Fix:</strong> use proper French names such as Montréal,
+                Québec, Lévis, Trois-Rivières, Saint-Jérôme, Côte-Saint-Luc,
+                Val-d'Or, Sept-Îles, and L'Assomption. Add local testimonials,
+                service-area notes, travel radius, and locally specific FAQs.
+              </p>
+            </div>
+          </article>
+
+          <article class="finding">
+            <div><span class="pill high">High</span></div>
+            <div>
+              <h3>Add an AIO/GEO content layer</h3>
+              <p>
+                AI Overviews and answer engines reward concise, extractable
+                answers, entity clarity, structured FAQs, and authoritative
+                citations. Current pages are service-forward but not especially
+                citation-ready.
+              </p>
+              <div class="evidence">
+                /llms.txt -> HTTP 404. Homepage has no JSON-LD. No obvious
+                source/citation blocks or concise answer-first sections were found.
+              </div>
+              <p>
+                <strong>Fix:</strong> add answer-first blocks, comparison tables,
+                "how much does it cost" answers, process definitions, FAQ schema
+                where eligible, and an <code>llms.txt</code> overview for AI crawlers.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Crawl & Metadata Snapshot</h2>
+            <p>Sampled live production pages on Apr 26, 2026.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Status</th>
+                <th>Title length</th>
+                <th>Description length</th>
+                <th>JSON-LD</th>
+                <th>Canonical issue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/</td>
+                <td><span class="pill good">200</span></td>
+                <td>62</td>
+                <td>67</td>
+                <td>0</td>
+                <td>Points to non-www</td>
+              </tr>
+              <tr>
+                <td>/services</td>
+                <td><span class="pill good">200</span></td>
+                <td>30</td>
+                <td>102</td>
+                <td>0</td>
+                <td>Points to non-www</td>
+              </tr>
+              <tr>
+                <td>/contact</td>
+                <td><span class="pill good">200</span></td>
+                <td>65</td>
+                <td>128</td>
+                <td>0</td>
+                <td>Points to non-www</td>
+              </tr>
+              <tr>
+                <td>/lavage-auto-interieur</td>
+                <td><span class="pill good">200</span></td>
+                <td>21</td>
+                <td>119</td>
+                <td>2</td>
+                <td>Points to non-www</td>
+              </tr>
+              <tr>
+                <td>/lavage-auto-interieur/montreal</td>
+                <td><span class="pill good">200</span></td>
+                <td>50</td>
+                <td>120</td>
+                <td>6</td>
+                <td>Points to non-www</td>
+              </tr>
+              <tr>
+                <td>/robots.txt</td>
+                <td><span class="pill critical">404</span></td>
+                <td>n/a</td>
+                <td>n/a</td>
+                <td>0</td>
+                <td>Missing file</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>GSC Opportunity Analysis</h2>
+            <p>
+              Search Console API data is now connected. Last 90 days:
+              Jan 23-Apr 23, 2026. Domain property:
+              <code>sc-domain:lavageautointerieur.ca</code>.
+            </p>
+          </div>
+        </div>
+        <div class="grid cols-3">
+          <div class="panel pad">
+            <span class="pill info">Search demand</span>
+            <h3 style="margin-top: 14px">3,961 impressions</h3>
+            <p class="muted">
+              Google is testing the site across many local service queries, but
+              average ranking remains deep at position 56.1.
+            </p>
+          </div>
+          <div class="panel pad">
+            <span class="pill high">CTR issue</span>
+            <h3 style="margin-top: 14px">32 clicks, 0.81% CTR</h3>
+            <p class="muted">
+              Query-visible rows show only 8 clicks; device totals show 32,
+              which means many clicks are hidden in anonymized GSC query data.
+            </p>
+          </div>
+          <div class="panel pad">
+            <span class="pill critical">Sitemap signal</span>
+            <h3 style="margin-top: 14px">206 submitted, 0 indexed</h3>
+            <p class="muted">
+              GSC reports the submitted sitemap has 206 web URLs, 0 indexed,
+              0 errors, and 0 warnings. Last downloaded: Mar 20, 2025.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top: 18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Priority Page</th>
+                <th>Clicks</th>
+                <th>Impressions</th>
+                <th>CTR</th>
+                <th>Avg Pos.</th>
+                <th>Recommended Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/lave-auto-a-la-main/repentigny</td>
+                <td>0</td>
+                <td>778</td>
+                <td>0%</td>
+                <td>57.3</td>
+                <td>Create a real Repentigny service page for cirage, polissage, remise à neuf, pricing, and local proof.</td>
+              </tr>
+              <tr>
+                <td>/lave-auto-a-la-main/sherbrooke</td>
+                <td>2</td>
+                <td>724</td>
+                <td>0.28%</td>
+                <td>61.6</td>
+                <td>Expand content around lavage auto, nettoyage auto, intérieur, à domicile, and price intent in Sherbrooke.</td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td>3</td>
+                <td>529</td>
+                <td>0.57%</td>
+                <td>80.0</td>
+                <td>Reposition homepage around clear service-area/entity signals and link to top opportunity cities.</td>
+              </tr>
+              <tr>
+                <td>/lave-auto-a-la-main</td>
+                <td>0</td>
+                <td>422</td>
+                <td>0%</td>
+                <td>74.5</td>
+                <td>Strengthen the hub page with comparison, pricing, FAQ, process, internal links, and schema.</td>
+              </tr>
+              <tr>
+                <td>/lave-auto-a-la-main/mirabel</td>
+                <td>0</td>
+                <td>328</td>
+                <td>0%</td>
+                <td>42.9</td>
+                <td>Optimize for "lave auto a la main mirabel" and "lavage auto intérieur et extérieur mirabel".</td>
+              </tr>
+              <tr>
+                <td>/lave-auto-a-la-main/magog</td>
+                <td>1</td>
+                <td>127</td>
+                <td>0.79%</td>
+                <td>18.6</td>
+                <td>Near-page-one page: improve title, H1, FAQ, local proof, and internal links to push into top 10.</td>
+              </tr>
+              <tr>
+                <td>/lave-auto-a-la-main/alma</td>
+                <td>4</td>
+                <td>71</td>
+                <td>5.63%</td>
+                <td>11.8</td>
+                <td>Best quick win: add local detail and internal links; it is close to first page already.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel" style="margin-top: 18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Query Opportunity</th>
+                <th>Mapped Page</th>
+                <th>Clicks</th>
+                <th>Impr.</th>
+                <th>CTR</th>
+                <th>Pos.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>cirage auto repentigny</td>
+                <td>/lave-auto-a-la-main/repentigny</td>
+                <td>0</td>
+                <td>239</td>
+                <td>0%</td>
+                <td>52.4</td>
+              </tr>
+              <tr>
+                <td>polissage auto repentigny</td>
+                <td>/lave-auto-a-la-main/repentigny</td>
+                <td>0</td>
+                <td>234</td>
+                <td>0%</td>
+                <td>61.1</td>
+              </tr>
+              <tr>
+                <td>remise à neuf véhicule repentigny</td>
+                <td>/lave-auto-a-la-main/repentigny</td>
+                <td>0</td>
+                <td>221</td>
+                <td>0%</td>
+                <td>66.1</td>
+              </tr>
+              <tr>
+                <td>lave auto a la main mirabel</td>
+                <td>/lave-auto-a-la-main/mirabel</td>
+                <td>0</td>
+                <td>176</td>
+                <td>0%</td>
+                <td>28.9</td>
+              </tr>
+              <tr>
+                <td>lavage auto sherbrooke</td>
+                <td>/lave-auto-a-la-main/sherbrooke</td>
+                <td>0</td>
+                <td>129</td>
+                <td>0%</td>
+                <td>66.9</td>
+              </tr>
+              <tr>
+                <td>nettoyage auto sherbrooke</td>
+                <td>/lave-auto-a-la-main/sherbrooke</td>
+                <td>0</td>
+                <td>129</td>
+                <td>0%</td>
+                <td>70.9</td>
+              </tr>
+              <tr>
+                <td>lave-auto magog à la main</td>
+                <td>/lave-auto-a-la-main/magog</td>
+                <td>0</td>
+                <td>14</td>
+                <td>0%</td>
+                <td>9.0</td>
+              </tr>
+              <tr>
+                <td>lave auto à la main à proximité</td>
+                <td>/lavage-auto-a-proximite</td>
+                <td>2</td>
+                <td>13</td>
+                <td>15.38%</td>
+                <td>13.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid cols-2" style="margin-top: 18px">
+          <div class="panel pad">
+            <h3>16-month strategic signals</h3>
+            <p class="muted">
+              Longer-range GSC data shows stronger historical demand for:
+              "lave auto repentigny" (3,467 impressions, avg pos. 8.8),
+              "lave auto a la main" (2,505 impressions, avg pos. 11.1),
+              "lave auto valleyfield" (1,401 impressions, avg pos. 7.6),
+              and "lave-auto à la main à proximité" (1,324 impressions,
+              avg pos. 6.8). These deserve first-page CTR work.
+            </p>
+          </div>
+          <div class="panel pad">
+            <h3>Device split</h3>
+            <p class="muted">
+              Desktop drives 3,275 impressions but only 10 clicks
+              (0.31% CTR, avg pos. 61.3). Mobile performs better with
+              645 impressions, 20 clicks, 3.10% CTR, avg pos. 31.8.
+              Prioritize mobile-local intent, but fix desktop snippets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>30-Day Action Plan</h2>
+            <p>Fix crawl signals first, then improve local and AIO content.</p>
+          </div>
+        </div>
+        <div class="panel timeline">
+          <div class="step">
+            <h3>Days 1-3: technical cleanup</h3>
+            <p>
+              Add <code>robots.txt</code>, align canonical host, regenerate
+              sitemap, update Open Graph URLs, and resubmit sitemap in GSC.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Days 4-7: metadata and schema</h3>
+            <p>
+              Rewrite service titles, fix escaped apostrophes, add homepage
+              LocalBusiness/Organization schema, and add BreadcrumbList schema.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Days 8-15: local page quality</h3>
+            <p>
+              Correct city names, add unique local proof, strengthen internal
+              links between service and city pages, and prune or noindex pages
+              that cannot be made meaningfully unique.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Days 16-23: AIO/GEO layer</h3>
+            <p>
+              Add answer-first sections, cost/process tables, service definitions,
+              author/service credibility blocks, citations, and <code>llms.txt</code>.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Days 24-30: GSC prioritization</h3>
+            <p>
+              Pull GSC data, identify low-CTR and position 11-20 opportunities,
+              update the top 10 pages by potential clicks, and track changes in a
+              monthly SEO log.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Validation Notes</h2>
+            <p>What was verified, and what needs connected data.</p>
+          </div>
+        </div>
+        <div class="grid cols-2">
+          <div class="panel pad">
+            <span class="pill good">Verified</span>
+            <ul>
+              <li>Production HTTP status checks for sampled pages</li>
+              <li>Robots and sitemap responses</li>
+              <li>Homepage, service, contact, and location metadata</li>
+              <li>Next.js production build completed successfully</li>
+              <li>Static route count: 211 generated pages</li>
+              <li>Google Search Console API query/page data for Jan 23-Apr 23, 2026</li>
+              <li>GSC sitemap API status for https://www.lavageautointerieur.ca/sitemap.xml</li>
+              <li>Lighthouse desktop lab scores: Performance 99, SEO 100, Accessibility 100, Best Practices 100</li>
+            </ul>
+          </div>
+          <div class="panel pad">
+            <span class="pill info">Not verified</span>
+            <ul>
+              <li>GA4 conversion and engagement data</li>
+              <li>Backlink profile and local citation consistency</li>
+              <li>Actual AI citation share in AI Overviews, ChatGPT, or Perplexity</li>
+            </ul>
+          </div>
+        </div>
+        <p class="print-note">
+          Report generated from live crawl evidence and local project inspection.
+          Keep this file as a decision document; use GSC exports to prioritize
+          exact pages and queries before large content changes.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

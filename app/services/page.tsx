@@ -5,10 +5,11 @@ import { Container } from '../../components/ui/container';
 import { Button } from '../../components/ui/button';
 import Link from 'next/link';
 import { SITE_CONFIG } from '../../lib/constants';
+import { generateBreadcrumbSchema, generateLocalBusinessSchema } from '../../lib/seo';
 
 export const metadata = {
   title: 'Nos Services | ' + SITE_CONFIG.name,
-  description: 'Découvrez notre gamme complète de services de lavage et d&apos;entretien automobile professionnel.',
+  description: "Découvrez notre gamme complète de services de lavage et d'entretien automobile professionnel.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/services`,
   },
@@ -104,6 +105,19 @@ const serviceFeatures = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateLocalBusinessSchema() }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbSchema([
+            { name: 'Accueil', url: SITE_CONFIG.url },
+            { name: 'Services', url: `${SITE_CONFIG.url}/services` },
+          ]),
+        }}
+      />
       <Hero
         title="Nos Services de Lavage Automobile"
         description="Découvrez notre gamme complète de services professionnels pour l&apos;entretien et le nettoyage de votre véhicule."

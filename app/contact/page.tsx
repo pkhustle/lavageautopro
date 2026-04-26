@@ -1,7 +1,7 @@
 import { Container } from '../../components/ui/container';
 import { ContactForm } from '../../components/blocks/contact-form';
 import { CONTACT_INFO, SITE_CONFIG } from '../../lib/constants';
-import { generateMetadata } from '../../lib/seo';
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, generateMetadata } from '../../lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Contact | Réservez votre service de lavage auto',
@@ -53,6 +53,19 @@ export default function ContactPage({
   const defaultLocation = searchParams?.location || "";
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateLocalBusinessSchema() }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbSchema([
+            { name: 'Accueil', url: SITE_CONFIG.url },
+            { name: 'Contact', url: `${SITE_CONFIG.url}/contact` },
+          ]),
+        }}
+      />
       <Container className="py-12 md:py-16 lg:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
