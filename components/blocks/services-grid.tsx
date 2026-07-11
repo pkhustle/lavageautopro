@@ -81,8 +81,6 @@ function ServiceCard({ title, description, features, href, image }: ServiceCardP
 const serviceImages = {
   'lavage-auto-interieur': '/images/wash-5144822_1280.jpg',
   'lave-auto-a-la-main': '/images/wash-a-car-1822415_1280.jpg',
-  'lavage-auto-a-proximite': '/images/automobile-2875254_1280.jpg',
-  'nettoyage-voiture-professionnel': '/images/cleaning-1837331_1280.jpg'
 };
 
 interface ServicesGridProps {

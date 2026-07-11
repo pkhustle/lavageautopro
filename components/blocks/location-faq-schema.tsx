@@ -118,14 +118,15 @@ export function LocationFAQSchema({ locationName, serviceType, serviceId, locati
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]/g, '');
   
-  // Try to find location FAQs, fall back to default if not found
-  const locationKey = Object.keys(LOCATION_FAQS).find(key => 
-    normalizedLocation.includes(key)) || 'default';
-  
-  const faqs = LOCATION_FAQS[locationKey];
+  // Only emit FAQPage schema for cities with their own FAQ content.
+  // The default Q&A set is shared across many pages; marking it up on each
+  // page would duplicate identical FAQPage markup site-wide.
+  const locationKey = Object.keys(LOCATION_FAQS).find(key =>
+    normalizedLocation.includes(key));
 
-  // Create FAQ schema
-  const faqSchema = {
+  const faqs = locationKey ? LOCATION_FAQS[locationKey] : null;
+
+  const faqSchema = faqs && {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     'mainEntity': faqs.map(faq => ({
@@ -166,12 +167,14 @@ export function LocationFAQSchema({ locationName, serviceType, serviceId, locati
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema)
-        }}
-      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema)
+          }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

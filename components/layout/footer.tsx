@@ -14,10 +14,16 @@ export function Footer() {
   const footerSections: FooterSection[] = [
     {
       title: 'Services',
-      links: SERVICES.map(service => ({
-        label: service.name,
-        href: `${SITE_CONFIG.url}/${service.id}`,
-      })),
+      links: [
+        ...SERVICES.map(service => ({
+          label: service.name,
+          href: `${SITE_CONFIG.url}/${service.id}`,
+        })),
+        {
+          label: 'Zones desservies',
+          href: `${SITE_CONFIG.url}/zones-desservies`,
+        },
+      ],
     },
     {
       title: 'Horaires',

@@ -158,6 +158,15 @@ const GSC_OPPORTUNITY_COPY: Record<string, Record<string, {
         'Possibilité de combiner avec un nettoyage intérieur complet lors du même rendez-vous.',
       ],
     },
+    'salaberry-de-valleyfield': {
+      title: 'Lave-auto à la main à Salaberry-de-Valleyfield',
+      intro: 'À Salaberry-de-Valleyfield, nous offrons un lave-auto à la main complet: carrosserie, jantes, vitres et finition protectrice. Notre service mobile se déplace chez vous, à la maison comme au travail, partout dans la région du Suroît.',
+      bullets: [
+        'Lavage extérieur à la main avec rinçage soigné et séchage sans traces.',
+        'Options de cirage et de protection de la peinture contre le calcium et les résidus d’hiver.',
+        'Service mobile pratique pour les résidents de Valleyfield et des environs.',
+      ],
+    },
   },
 };
 

@@ -15,40 +15,14 @@ export const SERVICES = [
   {
     id: 'lave-auto-a-la-main',
     name: 'Lave auto à la main',
-    description: 'Lavage minutieux à la main pour une finition parfaite',
-    metaDescription: 'Service premium de lavage auto à la main. Traitement personnalisé et attention particulière aux détails.',
+    description: 'Lavage minutieux à la main, polissage et cirage pour une finition parfaite',
+    metaDescription: 'Service premium de lavage auto à la main: lavage extérieur, polissage, cirage et protection de la peinture.',
     features: [
-      'Lavage extérieur',
-      'Polissage',
+      'Lavage extérieur à la main',
+      'Polissage et cirage',
       'Protection de la peinture',
       'Traitement des jantes',
       'Finition miroir'
-    ]
-  },
-  {
-    id: 'lavage-auto-a-proximite',
-    name: 'Lavage auto à proximité',
-    description: 'Service de lavage auto pratique près de chez vous',
-    metaDescription: 'Service de lavage automobile proche de votre localisation. Rapidité et qualité garanties.',
-    features: [
-      'Service rapide',
-      'Proximité',
-      'Qualité professionnelle',
-      'Sans rendez-vous',
-      'Satisfaction garantie'
-    ]
-  },
-  {
-    id: 'nettoyage-voiture-professionnel',
-    name: 'Nettoyage voiture professionnel',
-    description: 'Service complet de nettoyage professionnel',
-    metaDescription: 'Nettoyage professionnel complet de votre véhicule. Service premium pour un résultat impeccable.',
-    features: [
-      'Détailing complet',
-      'Traitement céramique',
-      'Correction de peinture',
-      'Protection longue durée',
-      'Restauration complète'
     ]
   }
 ];
@@ -67,43 +41,24 @@ export const LOCATIONS = [
   { id: 'saint-jean-sur-richelieu', name: 'Saint-Jean-sur-Richelieu' },
   { id: 'brossard', name: 'Brossard' },
   { id: 'repentigny', name: 'Repentigny' },
-  { id: 'saint-jerome', name: 'Saint-Jérôme' },
   { id: 'drummondville', name: 'Drummondville' },
   { id: 'granby', name: 'Granby' },
   { id: 'mirabel', name: 'Mirabel' },
   { id: 'blainville', name: 'Blainville' },
-  { id: 'saint-hyacinthe', name: 'Saint-Hyacinthe' },
-  { id: 'mascouche', name: 'Mascouche' },
-  { id: 'chateauguay', name: 'Châteauguay' },
-  { id: 'shawinigan', name: 'Shawinigan' },
-  { id: 'rimouski', name: 'Rimouski' },
-  { id: 'dollard-des-ormeaux', name: 'Dollard-des-Ormeaux' },
-  { id: 'victoriaville', name: 'Victoriaville' },
-  { id: 'saint-eustache', name: 'Saint-Eustache' },
   { id: 'salaberry-de-valleyfield', name: 'Salaberry-de-Valleyfield' },
-  { id: 'vaudreuil-dorion', name: 'Vaudreuil-Dorion' },
-  { id: 'rouyn-noranda', name: 'Rouyn-Noranda' },
-  { id: 'boucherville', name: 'Boucherville' },
-  { id: 'sorel-tracy', name: 'Sorel-Tracy' },
-  { id: 'cote-saint-luc', name: 'Côte-Saint-Luc' },
-  { id: 'saint-georges', name: 'Saint-Georges' },
-  { id: 'pointe-claire', name: 'Pointe-Claire' },
-  { id: 'val-dor', name: "Val-d'Or" },
-  { id: 'chambly', name: 'Chambly' },
   { id: 'alma', name: 'Alma' },
-  { id: 'sainte-julie', name: 'Sainte-Julie' },
-  { id: 'saint-constant', name: 'Saint-Constant' },
   { id: 'magog', name: 'Magog' },
-  { id: 'boisbriand', name: 'Boisbriand' },
-  { id: 'saint-bruno-de-montarville', name: 'Saint-Bruno-de-Montarville' },
-  { id: 'sainte-therese', name: 'Sainte-Thérèse' },
-  { id: 'la-prairie', name: 'La Prairie' },
-  { id: 'thetford-mines', name: 'Thetford Mines' },
-  { id: 'sept-iles', name: 'Sept-Îles' },
-  { id: 'beloeil', name: 'Beloeil' },
-  { id: 'lassomption', name: "L'Assomption" },
-  { id: 'saint-lambert', name: 'Saint-Lambert' },
-  { id: 'varennes', name: 'Varennes' },
+];
+
+// Cities removed from the programmatic set (kept for 301 redirects)
+export const REMOVED_LOCATION_IDS = [
+  'saint-jerome', 'saint-hyacinthe', 'mascouche', 'chateauguay', 'shawinigan',
+  'rimouski', 'dollard-des-ormeaux', 'victoriaville', 'saint-eustache',
+  'vaudreuil-dorion', 'rouyn-noranda', 'boucherville', 'sorel-tracy',
+  'cote-saint-luc', 'saint-georges', 'pointe-claire', 'val-dor', 'chambly',
+  'sainte-julie', 'saint-constant', 'boisbriand', 'saint-bruno-de-montarville',
+  'sainte-therese', 'la-prairie', 'thetford-mines', 'sept-iles', 'beloeil',
+  'lassomption', 'saint-lambert', 'varennes',
 ];
 
 export const CONTACT_INFO = {

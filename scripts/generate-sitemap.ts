@@ -23,6 +23,12 @@ function generateSitemap(): void {
       priority: '0.8',
       changefreq: 'monthly'
     },
+    // Service area page
+    {
+      url: '/zones-desservies',
+      priority: '0.8',
+      changefreq: 'monthly'
+    },
     // Service pages
     ...SERVICES.map(service => ({
       url: `/${service.id}`,

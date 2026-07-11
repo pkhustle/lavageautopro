@@ -1,29 +1,26 @@
 # Lavage Auto Pro
 
-> Service professionnel de lavage et détailing automobile au Québec.
+> Service mobile de lavage et détailing automobile au Québec.
 
-Lavage Auto Pro offre des services de lavage auto intérieur, lave-auto à la main, lavage auto à proximité et nettoyage voiture professionnel dans plusieurs villes du Québec.
+Lavage Auto Pro offre deux services principaux — le lavage auto intérieur et le lave-auto à la main (incluant polissage et cirage) — dans une vingtaine de villes du Québec. L'équipe est basée à Québec et se déplace chez les clients avec l'équipement nécessaire.
 
 ## Services principaux
 
 - Lavage auto intérieur: aspiration complète, nettoyage des surfaces, traitement des cuirs, désinfection et déodorisation.
-- Lave-auto à la main: lavage extérieur minutieux, polissage, protection de la peinture, traitement des jantes et finition miroir.
-- Lavage auto à proximité: service pratique et rapide dans plusieurs villes du Québec.
-- Nettoyage voiture professionnel: détailing complet, traitement céramique, correction de peinture, protection longue durée et restauration.
+- Lave-auto à la main: lavage extérieur minutieux, polissage, cirage, protection de la peinture, traitement des jantes et finition miroir.
 
 ## Pages importantes
 
 - Accueil: https://www.lavageautointerieur.ca/
 - Services: https://www.lavageautointerieur.ca/services
+- Zones desservies: https://www.lavageautointerieur.ca/zones-desservies
 - Contact: https://www.lavageautointerieur.ca/contact
 - Lavage auto intérieur: https://www.lavageautointerieur.ca/lavage-auto-interieur
 - Lave-auto à la main: https://www.lavageautointerieur.ca/lave-auto-a-la-main
-- Lavage auto à proximité: https://www.lavageautointerieur.ca/lavage-auto-a-proximite
-- Nettoyage voiture professionnel: https://www.lavageautointerieur.ca/nettoyage-voiture-professionnel
 
 ## Zone de service
 
-Le site contient des pages locales pour Montréal, Ville de Québec, Laval, Gatineau, Longueuil, Sherbrooke, Lévis, Saguenay, Trois-Rivières, Terrebonne, Repentigny, Mirabel, Alma, Magog, Rimouski, Boucherville, Victoriaville et d'autres villes du Québec.
+Le site contient des pages locales pour Montréal, Ville de Québec, Laval, Gatineau, Longueuil, Sherbrooke, Lévis, Saguenay, Trois-Rivières, Terrebonne, Saint-Jean-sur-Richelieu, Brossard, Repentigny, Drummondville, Granby, Mirabel, Blainville, Salaberry-de-Valleyfield, Alma et Magog. Le service mobile peut se déplacer dans d'autres villes du Québec sur demande.
 
 ## Informations de contact
 
