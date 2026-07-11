@@ -1,9 +1,7 @@
 import { Hero } from '../components/blocks/hero';
 import { ServicesGrid } from '../components/blocks/services-grid';
 import { Features } from '../components/blocks/features';
-import { Testimonials } from '../components/blocks/testimonials';
 import { PriceEstimator } from '../components/blocks/price-estimator';
-import { Team } from '../components/blocks/team';
 import { HowItWorks } from '../components/blocks/how-it-works';
 import { Gallery } from '../components/blocks/gallery';
 import { FAQ } from '../components/blocks/faq';
@@ -80,27 +78,6 @@ const homeFeatures = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: "Jean Dupont",
-    role: "Directeur",
-    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Marie Lambert",
-    role: "Chef d&apos;équipe",
-    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Pierre Martin",
-    role: "Spécialiste Technique",
-    description: "Certifié en correction de peinture et protection céramique.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800"
-  }
-];
-
 export default function Home() {
   return (
     <>
@@ -135,17 +112,6 @@ export default function Home() {
           description="Des services professionnels adaptés à vos besoins avec une garantie de satisfaction."
           features={homeFeatures}
           columns={4}
-        />
-      </section>
-
-      <section>
-        <Testimonials />
-      </section>
-
-      <section className="bg-gray-50">
-        <Team 
-          description="Une équipe passionnée et expérimentée à votre service."
-          members={teamMembers}
         />
       </section>
 

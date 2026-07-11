@@ -2,9 +2,7 @@ import { notFound } from 'next/navigation';
 import { ServiceHero } from '../../../components/blocks/service-hero';
 import { Features } from '../../../components/blocks/features';
 import { PriceEstimator } from '../../../components/blocks/price-estimator';
-import { Team } from '../../../components/blocks/team';
 import { LocationInfo } from '../../../components/blocks/location-info';
-import { LocationTestimonials } from '../../../components/blocks/location-testimonials';
 import { LocationMap } from '../../../components/blocks/location-map';
 import { LocationFAQ } from '../../../components/blocks/location-faq';
 import { LocationFAQSchema } from '../../../components/blocks/location-faq-schema';
@@ -14,29 +12,7 @@ import { Button } from '../../../components/ui/button';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ImageCarousel } from '../../../components/blocks/image-carousel';
-
-const teamMembers = [
-  {
-    name: "Jean Dupont",
-    role: "Directeur",
-    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Marie Lambert",
-    role: "Chef d&apos;équipe",
-    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Pierre Martin",
-    role: "Spécialiste Technique",
-    description: "Certifié en correction de peinture et protection céramique.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800"
-  }
-];
 
 interface LocationServicePageProps {
   params: {
@@ -139,7 +115,7 @@ const GSC_OPPORTUNITY_COPY: Record<string, Record<string, {
   'lave-auto-a-la-main': {
     repentigny: {
       title: 'Lave-auto à la main, cirage et polissage à Repentigny',
-      intro: 'Les recherches Google montrent une demande locale pour le cirage auto, le polissage auto et la remise à neuf de véhicule à Repentigny. Cette page répond directement à ces besoins avec un service minutieux, adapté aux véhicules utilisés au quotidien.',
+      intro: 'À Repentigny, nous offrons un lavage à la main complet ainsi que le cirage, le polissage et la remise à neuf de véhicule. Un service minutieux, adapté aux véhicules utilisés au quotidien comme aux voitures que vous préparez pour la revente.',
       bullets: [
         'Cirage et protection de peinture pour aider à conserver le lustre du véhicule.',
         'Polissage esthétique pour améliorer l’apparence des micro-rayures légères.',
@@ -148,38 +124,38 @@ const GSC_OPPORTUNITY_COPY: Record<string, Record<string, {
     },
     sherbrooke: {
       title: 'Lavage auto et nettoyage intérieur à Sherbrooke',
-      intro: 'À Sherbrooke, les recherches portent autant sur le lavage auto que sur le nettoyage intérieur, le nettoyage à domicile et les services près de chez soi. Notre service cible ces besoins avec une prise en charge claire et flexible.',
+      intro: 'À Sherbrooke, nous combinons lavage extérieur à la main et nettoyage intérieur en profondeur, avec une prise en charge claire et flexible — y compris le service à domicile lorsque c’est possible.',
       bullets: [
         'Nettoyage intérieur des tapis, sièges, plastiques et surfaces fréquemment touchées.',
         'Lavage à la main pour une finition soignée sans approche industrielle impersonnelle.',
-        'Service pensé pour les clients qui comparent les options de lavage auto à Sherbrooke.',
+        'Forfaits clairs et devis rapide pour comparer facilement vos options à Sherbrooke.',
       ],
     },
     mirabel: {
       title: 'Lave-auto à la main à Mirabel',
-      intro: 'Mirabel ressort comme une opportunité forte dans Search Console pour les recherches de lave-auto à la main et de lavage auto intérieur et extérieur. La page met donc l’accent sur la qualité, la finition et le service local.',
+      intro: 'À Mirabel, notre lave-auto à la main mise sur la qualité de la finition: carrosserie, jantes, vitres et habitacle sont traités avec soin, à l’intérieur comme à l’extérieur.',
       bullets: [
         'Lavage à la main avec attention aux détails visibles: carrosserie, jantes et finition.',
         'Options de nettoyage intérieur et extérieur selon le besoin du véhicule.',
-        'Contenu local optimisé pour les clients qui cherchent un lave-auto à Mirabel.',
+        'Prise de rendez-vous simple et service courtois pour les conducteurs de Mirabel.',
       ],
     },
     magog: {
       title: 'Lave-auto à la main à Magog',
-      intro: 'Magog est déjà près de la première page pour certaines requêtes. Cette page renforce les signaux locaux, les réponses rapides et les détails de service pour convertir cette visibilité en clics.',
+      intro: 'À Magog, nous offrons un lavage à la main soigné, du nettoyage intérieur et des finitions protectrices, avec des délais rapides et un processus expliqué clairement avant chaque intervention.',
       bullets: [
-        'Réponse claire aux recherches de lave-auto à la main à Magog.',
-        'Explication du processus pour aider les visiteurs et les moteurs de réponse.',
-        'Appels à l’action locaux pour demander un service ou un devis.',
+        'Lavage à la main complet, adapté à la taille et à l’état de votre véhicule.',
+        'Processus expliqué étape par étape avant le début du service.',
+        'Devis rapide et sans engagement pour les conducteurs de Magog.',
       ],
     },
     alma: {
       title: 'Lave-auto à la main à Alma',
-      intro: 'Alma affiche une position moyenne proche de la première page dans GSC. Le contenu doit donc aider Google à comprendre le service, la zone desservie et les raisons de choisir Lavage Auto Pro.',
+      intro: 'À Alma, notre équipe offre un lavage à la main minutieux ainsi que des soins de finition et de protection pour garder votre véhicule propre plus longtemps, été comme hiver.',
       bullets: [
-        'Positionnement local clair pour les recherches de lave-auto à Alma.',
+        'Lavage à la main soigné pour les conducteurs d’Alma et des environs.',
         'Informations utiles sur le lavage, la finition et la protection du véhicule.',
-        'Liens internes vers les autres services automobiles pertinents.',
+        'Possibilité de combiner avec un nettoyage intérieur complet lors du même rendez-vous.',
       ],
     },
   },
@@ -203,40 +179,6 @@ export default function LocationServicePage({ params }: LocationServicePageProps
   
   if (!service || !location) return notFound();
 
-  // Determine section order based on location ID
-  // This creates a unique layout for each location
-  const getSectionOrder = (locationId: string) => {
-    // Create a hash from the location ID to get a consistent but unique order
-    const hash = locationId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    
-    // Define all sections
-    const sections = [
-      'hero',
-      'locationInfo',
-      'testimonials',
-      'pricing',
-      'features',
-      'faq',
-      'team',
-      'otherServices',
-      'cta'
-    ];
-    
-    // Shuffle the sections (except hero which always stays first)
-    const heroSection = sections.shift();
-    const shuffledSections = [...sections];
-    
-    // Use the hash to create a deterministic shuffle
-    for (let i = shuffledSections.length - 1; i > 0; i--) {
-      const j = (hash + i) % (i + 1);
-      [shuffledSections[i], shuffledSections[j]] = [shuffledSections[j], shuffledSections[i]];
-    }
-    
-    // Return the ordered sections with hero always first
-    return [heroSection, ...shuffledSections];
-  };
-
-  const sectionOrder = getSectionOrder(location.id);
   const opportunityCopy = getOpportunityCopy(service.id, location.id, service.name, location.name);
 
   // Define all sections as components
@@ -244,9 +186,9 @@ export default function LocationServicePage({ params }: LocationServicePageProps
     hero: (
       <section key="hero" className="relative text-white py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-90 z-0"></div>
-        <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center" 
-          style={{ 
-            backgroundImage: `url('https://source.unsplash.com/1600x900/?${location.name},city,landmark')`,
+        <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('/images/washing-car-1397382_1280.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}>
@@ -295,7 +237,7 @@ export default function LocationServicePage({ params }: LocationServicePageProps
         <Container>
           <div className="mx-auto max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Réponse locale
+              Service local
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900">
               {opportunityCopy.title}
@@ -316,13 +258,6 @@ export default function LocationServicePage({ params }: LocationServicePageProps
           </div>
         </Container>
       </section>
-    ),
-    
-    testimonials: (
-      <LocationTestimonials 
-        key="testimonials"
-        locationName={location.name} 
-      />
     ),
     
     pricing: (
@@ -369,38 +304,6 @@ export default function LocationServicePage({ params }: LocationServicePageProps
         locationName={location.name}
         serviceType={service.name}
       />
-    ),
-    
-    team: (
-      <section key="team" className="bg-gray-900 text-white py-16">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Notre équipe à {location.name}</h2>
-            <p className="text-lg text-gray-300 mt-4">
-              Des professionnels expérimentés à votre service dans la région de {location.name}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                <div className="h-64 overflow-hidden relative">
-                  <Image 
-                    src={member.image} 
-                    alt={member.name} 
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white">{member.name}</h3>
-                  <p className="text-primary font-medium">{member.role}</p>
-                  <p className="text-gray-400 mt-2">{member.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
     ),
     
     otherServices: (
@@ -457,12 +360,9 @@ export default function LocationServicePage({ params }: LocationServicePageProps
                 </Link>
               </Button>
               <Button asChild variant="outline" className="border-white text-white hover:bg-white/20">
-                <a href="tel:+1234567890">
-                  <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Nous appeler
-                </a>
+                <Link href={`${SITE_CONFIG.url}/contact`}>
+                  Demander un devis
+                </Link>
               </Button>
             </div>
           </div>
@@ -490,9 +390,12 @@ export default function LocationServicePage({ params }: LocationServicePageProps
 
       {sections.hero}
       {sections.localOpportunity}
-      {sectionOrder
-        .filter(sectionName => sectionName !== 'hero')
-        .map(sectionName => sections[sectionName as keyof typeof sections])}
+      {sections.locationInfo}
+      {sections.features}
+      {sections.pricing}
+      {sections.faq}
+      {sections.otherServices}
+      {sections.cta}
     </>
   );
 }

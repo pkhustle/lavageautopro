@@ -90,7 +90,6 @@ export function generateServiceSchema(service: string, location?: string, servic
     url: serviceId && locationId 
       ? `${SITE_CONFIG.url}/${serviceId}/${locationId}` 
       : SITE_CONFIG.url,
-    telephone: '',  // Add phone when available
     priceRange: '$$',
     areaServed: location ? location : 'Québec',
     serviceType: service,

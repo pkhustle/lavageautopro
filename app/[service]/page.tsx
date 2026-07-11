@@ -1,35 +1,12 @@
 import { notFound } from 'next/navigation';
 import { ServiceHero } from '../../components/blocks/service-hero';
 import { Features } from '../../components/blocks/features';
-import { Team } from '../../components/blocks/team';
 import { ServicesGrid } from '../../components/blocks/services-grid';
 import { Container } from '../../components/ui/container';
 import { Button } from '../../components/ui/button';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../lib/constants';
 import { generateBreadcrumbSchema, generateServiceSchema } from '../../lib/seo';
 import Link from 'next/link';
-import Image from 'next/image';
-
-const teamMembers = [
-  {
-    name: "Jean Dupont",
-    role: "Directeur",
-    description: "Plus de 15 ans d&apos;expérience dans le détailing automobile de luxe.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Marie Lambert",
-    role: "Chef d&apos;équipe",
-    description: "Experte en restauration d&apos;intérieur et traitement de cuir.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800"
-  },
-  {
-    name: "Pierre Martin",
-    role: "Spécialiste Technique",
-    description: "Certifié en correction de peinture et protection céramique.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800"
-  }
-];
 
 interface ServicePageProps {
   params: {
@@ -266,38 +243,6 @@ export default function ServicePage({ params }: ServicePageProps) {
                 </div>
               ))}
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Team section with different layout */}
-      <section className="py-16 bg-white">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Notre équipe d&apos;experts
-            </h2>
-            <p className="text-lg text-gray-600">
-              Des professionnels passionnés et expérimentés à votre service
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 relative">
-                  <Image 
-                    src={member.image} 
-                    alt={member.name} 
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-primary font-medium">{member.role}</p>
-                <p className="text-gray-600 mt-2">{member.description}</p>
-              </div>
-            ))}
           </div>
         </Container>
       </section>
