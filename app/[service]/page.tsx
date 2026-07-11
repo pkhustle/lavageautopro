@@ -4,6 +4,7 @@ import { Features } from '../../components/blocks/features';
 import { ServicesGrid } from '../../components/blocks/services-grid';
 import { Container } from '../../components/ui/container';
 import { Button } from '../../components/ui/button';
+import { Breadcrumbs } from '../../components/ui/breadcrumbs';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../lib/constants';
 import { generateBreadcrumbSchema, generateServiceSchema } from '../../lib/seo';
 import Link from 'next/link';
@@ -32,6 +33,14 @@ export async function generateMetadata({ params }: ServicePageProps) {
       title: `${service.name} professionnel au Québec | ${SITE_CONFIG.name}`,
       description: service.metaDescription,
       url: `${SITE_CONFIG.url}/${params.service}`,
+      images: [
+        {
+          url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+          width: 1280,
+          height: 853,
+          alt: SITE_CONFIG.name,
+        },
+      ],
     },
     alternates: {
       canonical: `${SITE_CONFIG.url}/${params.service}`,
@@ -122,6 +131,13 @@ export default function ServicePage({ params }: ServicePageProps) {
             { name: service.name, url: `${SITE_CONFIG.url}/${params.service}` },
           ]),
         }}
+      />
+
+      <Breadcrumbs
+        items={[
+          { name: 'Accueil', href: '/' },
+          { name: service.name },
+        ]}
       />
 
       {/* Hero banner with image background - different from both home and location pages */}

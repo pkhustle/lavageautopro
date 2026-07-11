@@ -41,6 +41,14 @@ export function generateMetadata({
       locale: 'fr_CA',
       url: path ? `${SITE_CONFIG.url}/${path}` : SITE_CONFIG.url,
       siteName: SITE_CONFIG.name,
+      images: [
+        {
+          url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+          width: 1280,
+          height: 853,
+          alt: SITE_CONFIG.name,
+        },
+      ],
     },
     alternates: {
       canonical: path ? `${SITE_CONFIG.url}/${path}` : SITE_CONFIG.url,
@@ -49,6 +57,7 @@ export function generateMetadata({
       card: 'summary_large_image',
       title: finalTitle,
       description: finalDescription,
+      images: [`${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`],
     },
   };
 }
@@ -69,7 +78,7 @@ export function generateLocationMetadata(service: string, location: string, serv
 export function generateServiceSchema(service: string, location?: string, serviceId?: string, locationId?: string) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'AutoRepair',
+    '@type': 'AutoWash',
     name: location ? `${SITE_CONFIG.name} - ${service} à ${location}` : SITE_CONFIG.name,
     description: location 
       ? `Service professionnel de ${service.toLowerCase()} à ${location}. Expertise locale, satisfaction garantie.` 
@@ -95,8 +104,6 @@ export function generateServiceSchema(service: string, location?: string, servic
     serviceType: service,
     // Add more specific details for location pages
     ...(location && {
-      slogan: `Le meilleur service de ${service.toLowerCase()} à ${location}`,
-      keywords: `${service}, ${location}, lavage auto, detailing, nettoyage voiture, service automobile ${location}`,
       availableLanguage: ['fr', 'en'],
       paymentAccepted: 'Cash, Credit Card, Debit Card',
       openingHours: [
@@ -112,7 +119,7 @@ export function generateServiceSchema(service: string, location?: string, servic
 export function generateLocalBusinessSchema() {
   return JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'AutoRepair',
+    '@type': 'AutoWash',
     '@id': `${SITE_CONFIG.url}/#business`,
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,

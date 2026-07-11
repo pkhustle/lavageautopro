@@ -29,6 +29,17 @@ function generateSitemap(): void {
       priority: '0.8',
       changefreq: 'monthly'
     },
+    // Legal pages
+    {
+      url: '/politique-de-confidentialite',
+      priority: '0.3',
+      changefreq: 'yearly'
+    },
+    {
+      url: '/conditions-dutilisation',
+      priority: '0.3',
+      changefreq: 'yearly'
+    },
     // Service pages
     ...SERVICES.map(service => ({
       url: `/${service.id}`,

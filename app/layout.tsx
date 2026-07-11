@@ -42,6 +42,20 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     locale: 'fr_CA',
     type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+        width: 1280,
+        height: 853,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_CONFIG.defaultTitle,
+    description: SITE_CONFIG.description,
+    images: [`${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`],
   },
   alternates: {
     canonical: SITE_CONFIG.url,

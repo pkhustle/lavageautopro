@@ -81,6 +81,7 @@ export const SITE_CONFIG = {
   name: 'Lavage Auto Pro',
   description: 'Services professionnels de lavage et détailing automobile au Québec',
   url: 'https://www.lavageautointerieur.ca',
+  ogImage: '/images/washing-car-1397382_1280.jpg',
   defaultTitle: 'Lavage Auto Pro | Lavage auto intérieur au Québec',
   defaultDescription: 'Services professionnels de lavage et détailing automobile au Québec. Nettoyage intérieur et extérieur, polissage, protection et restauration de véhicules.',
   defaultKeywords: 'lavage auto, détailing, nettoyage voiture, lavage intérieur, lave auto à la main, service automobile'

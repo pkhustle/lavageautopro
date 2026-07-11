@@ -3,12 +3,12 @@ import { ServiceHero } from '../../../components/blocks/service-hero';
 import { Features } from '../../../components/blocks/features';
 import { PriceEstimator } from '../../../components/blocks/price-estimator';
 import { LocationInfo } from '../../../components/blocks/location-info';
-import { LocationMap } from '../../../components/blocks/location-map';
 import { LocationFAQ } from '../../../components/blocks/location-faq';
 import { LocationFAQSchema } from '../../../components/blocks/location-faq-schema';
 import { ServicesGrid } from '../../../components/blocks/services-grid';
 import { Container } from '../../../components/ui/container';
 import { Button } from '../../../components/ui/button';
+import { Breadcrumbs } from '../../../components/ui/breadcrumbs';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
@@ -390,11 +390,19 @@ export default function LocationServicePage({ params }: LocationServicePageProps
         }}
       />
       
-      <LocationFAQSchema 
+      <LocationFAQSchema
         locationName={location.name}
         serviceType={service.name}
         serviceId={params.service}
         locationId={params.location}
+      />
+
+      <Breadcrumbs
+        items={[
+          { name: 'Accueil', href: '/' },
+          { name: service.name, href: `/${service.id}` },
+          { name: location.name },
+        ]}
       />
 
       {sections.hero}
