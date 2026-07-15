@@ -24,6 +24,19 @@ export const SERVICES = [
       'Traitement des jantes',
       'Finition miroir'
     ]
+  },
+  {
+    id: 'lavage-auto-a-domicile',
+    name: 'Lavage auto à domicile',
+    description: 'Service mobile: nous nous déplaçons chez vous, à la maison ou au travail',
+    metaDescription: "Lavage auto à domicile: notre équipe mobile se déplace chez vous pour un nettoyage intérieur et extérieur complet, sans que vous ayez à vous déplacer.",
+    features: [
+      'Déplacement à domicile ou au travail',
+      'Nettoyage intérieur complet sur place',
+      'Lavage extérieur à la main',
+      'Équipement autonome (eau et électricité)',
+      'Prise de rendez-vous flexible'
+    ]
   }
 ];
 
@@ -48,12 +61,17 @@ export const LOCATIONS = [
   { id: 'salaberry-de-valleyfield', name: 'Salaberry-de-Valleyfield' },
   { id: 'alma', name: 'Alma' },
   { id: 'magog', name: 'Magog' },
+  // Restored 2026-07: these small-market pages earned most GSC clicks
+  // (Rimouski = 45% of clicks, positions 25-55) before the July prune
+  { id: 'rimouski', name: 'Rimouski' },
+  { id: 'victoriaville', name: 'Victoriaville' },
+  { id: 'shawinigan', name: 'Shawinigan' },
 ];
 
 // Cities removed from the programmatic set (kept for 301 redirects)
 export const REMOVED_LOCATION_IDS = [
-  'saint-jerome', 'saint-hyacinthe', 'mascouche', 'chateauguay', 'shawinigan',
-  'rimouski', 'dollard-des-ormeaux', 'victoriaville', 'saint-eustache',
+  'saint-jerome', 'saint-hyacinthe', 'mascouche', 'chateauguay',
+  'dollard-des-ormeaux', 'saint-eustache',
   'vaudreuil-dorion', 'rouyn-noranda', 'boucherville', 'sorel-tracy',
   'cote-saint-luc', 'saint-georges', 'pointe-claire', 'val-dor', 'chambly',
   'sainte-julie', 'saint-constant', 'boisbriand', 'saint-bruno-de-montarville',
@@ -79,10 +97,10 @@ export const CONTACT_INFO = {
 
 export const SITE_CONFIG = {
   name: 'Lavage Auto Pro',
-  description: 'Services professionnels de lavage et détailing automobile au Québec',
+  description: 'Lavage auto intérieur et extérieur à Québec et ses environs. Service professionnel en atelier ou à domicile.',
   url: 'https://www.lavageautointerieur.ca',
   ogImage: '/images/washing-car-1397382_1280.jpg',
-  defaultTitle: 'Lavage Auto Pro | Lavage auto intérieur au Québec',
-  defaultDescription: 'Services professionnels de lavage et détailing automobile au Québec. Nettoyage intérieur et extérieur, polissage, protection et restauration de véhicules.',
-  defaultKeywords: 'lavage auto, détailing, nettoyage voiture, lavage intérieur, lave auto à la main, service automobile'
+  defaultTitle: 'Lavage auto intérieur et extérieur à Québec | Lavage Auto Pro',
+  defaultDescription: 'Lavage auto intérieur et extérieur à Québec: nettoyage de l\'habitacle, lavage à la main, polissage et service à domicile dans la région de Québec. Devis rapide et gratuit.',
+  defaultKeywords: 'lavage auto québec, lavage auto intérieur, nettoyage voiture québec, lave auto à la main québec, lavage auto à domicile, détailing québec'
 };

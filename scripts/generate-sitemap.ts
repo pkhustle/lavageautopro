@@ -29,6 +29,12 @@ function generateSitemap(): void {
       priority: '0.8',
       changefreq: 'monthly'
     },
+    // Pricing page
+    {
+      url: '/tarifs',
+      priority: '0.8',
+      changefreq: 'monthly'
+    },
     // Legal pages
     {
       url: '/politique-de-confidentialite',

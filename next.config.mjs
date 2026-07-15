@@ -1,7 +1,7 @@
 // Keep in sync with REMOVED_LOCATION_IDS in lib/constants.ts (next.config cannot import TS)
 const REMOVED_LOCATIONS = [
-  'saint-jerome', 'saint-hyacinthe', 'mascouche', 'chateauguay', 'shawinigan',
-  'rimouski', 'dollard-des-ormeaux', 'victoriaville', 'saint-eustache',
+  'saint-jerome', 'saint-hyacinthe', 'mascouche', 'chateauguay',
+  'dollard-des-ormeaux', 'saint-eustache',
   'vaudreuil-dorion', 'rouyn-noranda', 'boucherville', 'sorel-tracy',
   'cote-saint-luc', 'saint-georges', 'pointe-claire', 'val-dor', 'chambly',
   'sainte-julie', 'saint-constant', 'boisbriand', 'saint-bruno-de-montarville',
@@ -10,7 +10,7 @@ const REMOVED_LOCATIONS = [
 ];
 
 const REMOVED_SERVICES = ['lavage-auto-a-proximite', 'nettoyage-voiture-professionnel'];
-const KEPT_SERVICES = ['lavage-auto-interieur', 'lave-auto-a-la-main'];
+const KEPT_SERVICES = ['lavage-auto-interieur', 'lave-auto-a-la-main', 'lavage-auto-a-domicile'];
 
 const securityHeaders = [
   {

@@ -23,6 +23,10 @@ export function Footer() {
           label: 'Zones desservies',
           href: `${SITE_CONFIG.url}/zones-desservies`,
         },
+        {
+          label: 'Tarifs',
+          href: `${SITE_CONFIG.url}/tarifs`,
+        },
       ],
     },
     {

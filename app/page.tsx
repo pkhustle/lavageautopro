@@ -90,8 +90,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: generateWebsiteSchema() }}
       />
       <Hero
-        title="Service professionnel de lavage automobile"
-        description="Redonnez à votre véhicule son éclat d&apos;origine avec nos services de nettoyage professionnel. Une équipe expérimentée et des résultats garantis."
+        title="Lavage auto intérieur et extérieur à Québec"
+        description="Nettoyage professionnel de votre véhicule à Québec et dans les environs, en atelier ou à domicile. Une équipe expérimentée et des résultats garantis."
         cta={{
           text: "Réserver maintenant",
           href: `${SITE_CONFIG.url}/contact`,

@@ -27,6 +27,7 @@ export function Header() {
   const navigation = [
     { name: 'Accueil', href: `${SITE_CONFIG.url}/` },
     { name: 'Services', href: '#', dropdown: true },
+    { name: 'Tarifs', href: `${SITE_CONFIG.url}/tarifs` },
     { name: 'Nous contacter', href: `${SITE_CONFIG.url}/contact` },
     { name: 'FAQ', href: `${SITE_CONFIG.url}/#faq` },
   ];

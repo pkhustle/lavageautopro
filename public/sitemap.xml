@@ -2,283 +2,469 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.lavageautointerieur.ca/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/contact</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/zones-desservies</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/tarifs</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/politique-de-confidentialite</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/conditions-dutilisation</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/montreal</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/ville-de-quebec</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/laval</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/gatineau</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/longueuil</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/sherbrooke</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/levis</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/saguenay</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/trois-rivieres</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/terrebonne</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/saint-jean-sur-richelieu</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/brossard</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/repentigny</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/drummondville</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/granby</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/mirabel</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/blainville</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/salaberry-de-valleyfield</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/alma</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/magog</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/rimouski</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/victoriaville</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-interieur/shawinigan</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/montreal</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/ville-de-quebec</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/laval</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/gatineau</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/longueuil</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/sherbrooke</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/levis</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/saguenay</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/trois-rivieres</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/terrebonne</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/saint-jean-sur-richelieu</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/brossard</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/repentigny</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/drummondville</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/granby</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/mirabel</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/blainville</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/salaberry-de-valleyfield</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/alma</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/magog</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/rimouski</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/victoriaville</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lave-auto-a-la-main/shawinigan</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/montreal</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/ville-de-quebec</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/laval</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/gatineau</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/longueuil</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/sherbrooke</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/levis</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/saguenay</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/trois-rivieres</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/terrebonne</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/saint-jean-sur-richelieu</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/brossard</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/repentigny</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/drummondville</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/granby</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/mirabel</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/blainville</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/salaberry-de-valleyfield</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/alma</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/magog</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/rimouski</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/victoriaville</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lavageautointerieur.ca/lavage-auto-a-domicile/shawinigan</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

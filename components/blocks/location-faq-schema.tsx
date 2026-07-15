@@ -86,6 +86,116 @@ const LOCATION_FAQS: LocationFAQs = {
       answer: "Oui, nous avons développé des services spécifiques pour les résidents de Laval, tenant compte des particularités locales comme la proximité des zones industrielles et des autoroutes qui peuvent affecter l&apos;état de votre véhicule."
     }
   ],
+  'brossard': [
+    {
+      question: "Combien coûte un nettoyage intérieur de voiture à Brossard?",
+      answer: "Le nettoyage intérieur complet s'ajoute pour 50$ au forfait de base, qui varie de 80$ à 150$ selon le type de véhicule (compacte, berline, SUV ou fourgonnette). Le prix exact est toujours confirmé avant le rendez-vous, sans surprise."
+    },
+    {
+      question: "Desservez-vous tous les secteurs de Brossard?",
+      answer: "Oui, nous desservons l'ensemble de Brossard, du Quartier DIX30 aux secteurs résidentiels B, C, M, N, O, P, R et S, ainsi que les villes voisines de la Rive-Sud comme Saint-Lambert, La Prairie et Longueuil."
+    },
+    {
+      question: "Pouvez-vous enlever les poils d'animaux et les taches sur les sièges?",
+      answer: "Oui, c'est l'une des demandes les plus fréquentes à Brossard. Nous utilisons des outils spécialisés pour extraire les poils d'animaux incrustés dans les tissus, puis un shampoing en profondeur pour traiter les taches sur les sièges et tapis."
+    },
+    {
+      question: "Proposez-vous le service à domicile à Brossard?",
+      answer: "Oui, notre unité mobile se déplace à votre domicile ou à votre lieu de travail à Brossard. Vous n'avez qu'à nous donner accès au véhicule: nous apportons l'équipement et les produits nécessaires."
+    },
+    {
+      question: "Combien de temps prend un nettoyage intérieur complet à Brossard?",
+      answer: "Comptez entre 2 et 3 heures pour un nettoyage intérieur complet, selon la taille du véhicule et son état. Un véhicule familial avec sièges pour enfants ou poils d'animaux peut demander un peu plus de temps."
+    }
+  ],
+  'sherbrooke': [
+    {
+      question: "Offrez-vous le lavage auto à domicile à Sherbrooke?",
+      answer: "Oui, le service à domicile est disponible partout à Sherbrooke: Fleurimont, Mont-Bellevue, Rock Forest–Saint-Élie–Deauville, Jacques-Cartier, Brompton et Lennoxville. Notre équipe se déplace chez vous ou à votre travail avec tout l'équipement nécessaire."
+    },
+    {
+      question: "Combien coûte un lavage auto intérieur et extérieur à Sherbrooke?",
+      answer: "Le forfait de base (lavage extérieur à la main) va de 80$ pour une compacte à 150$ pour une fourgonnette. Le nettoyage intérieur complet s'ajoute pour 50$. Un devis exact et gratuit est confirmé avant chaque rendez-vous."
+    },
+    {
+      question: "Comment traitez-vous le calcium et le sel des routes de l'Estrie en hiver?",
+      answer: "Les traces blanches de calcium sur les tapis et le bas de caisse sont fréquentes à Sherbrooke en hiver. Nous utilisons des produits conçus pour dissoudre le calcium sans abîmer les tissus, puis nous appliquons une protection qui facilite l'entretien jusqu'au printemps."
+    },
+    {
+      question: "Combien de temps prend un nettoyage complet à Sherbrooke?",
+      answer: "Un lavage extérieur à la main prend environ 1 heure; avec le nettoyage intérieur complet, comptez de 2 à 3 heures selon la taille et l'état du véhicule. Le temps estimé vous est communiqué lors de la réservation."
+    },
+    {
+      question: "Faut-il réserver longtemps d'avance à Sherbrooke?",
+      answer: "Nous recommandons de réserver quelques jours à l'avance, surtout au printemps et à l'automne qui sont les périodes les plus achalandées. Contactez-nous pour connaître les prochaines disponibilités dans votre secteur."
+    }
+  ],
+  'rimouski': [
+    {
+      question: "Pourquoi le lavage auto est-il particulièrement important à Rimouski?",
+      answer: "À Rimouski, la proximité du fleuve expose les véhicules à l'air salin en plus du sel de déglaçage en hiver, deux facteurs qui accélèrent la corrosion. Un lavage régulier avec rinçage du bas de caisse et une protection de la peinture aident à préserver la carrosserie."
+    },
+    {
+      question: "Desservez-vous tous les secteurs de Rimouski?",
+      answer: "Oui, nous desservons l'ensemble de Rimouski, incluant Saint-Germain, Nazareth, Sacré-Cœur, Pointe-au-Père, Sainte-Odile et Le Bic, ainsi que les municipalités voisines du Bas-Saint-Laurent sur demande."
+    },
+    {
+      question: "Quel est le prix d'un lavage auto à la main à Rimouski?",
+      answer: "Le forfait de base commence à 80$ pour une compacte et va jusqu'à 150$ pour une fourgonnette. Le nettoyage intérieur complet s'ajoute pour 50$, et le cirage protecteur pour 30$. Le prix est confirmé avant le début du service."
+    },
+    {
+      question: "Combien de temps prend un lavage complet à Rimouski?",
+      answer: "Comptez environ 1 heure pour le lavage extérieur à la main et de 2 à 3 heures si vous ajoutez le nettoyage intérieur complet, selon la taille et l'état du véhicule."
+    },
+    {
+      question: "Comment réserver un lavage auto à Rimouski?",
+      answer: "Vous pouvez réserver via notre formulaire de contact en ligne: indiquez votre type de véhicule et le service souhaité, et nous vous confirmons rapidement un rendez-vous avec le prix exact, sans engagement."
+    }
+  ],
+  'victoriaville': [
+    {
+      question: "Quelle est la différence avec un lave-auto libre-service à Victoriaville?",
+      answer: "Contrairement au libre-service, notre lavage à la main est réalisé entièrement par notre équipe: prélavage, lavage au gant, rinçage et séchage sans traces. C'est plus doux pour la peinture qu'un lave-auto automatique et plus complet qu'un libre-service, sans effort de votre part."
+    },
+    {
+      question: "Desservez-vous tous les secteurs de Victoriaville?",
+      answer: "Oui, nous desservons l'ensemble de Victoriaville, incluant le centre-ville, le secteur Arthabaska et Sainte-Victoire-d'Arthabaska, ainsi que les municipalités voisines des Bois-Francs sur demande."
+    },
+    {
+      question: "Quel est le prix d'un lavage auto à Victoriaville?",
+      answer: "Le forfait de base commence à 80$ pour une compacte et va jusqu'à 150$ pour une fourgonnette. Vous pouvez ajouter le nettoyage intérieur complet (+50$), le cirage (+30$) ou une protection céramique (+100$). Devis gratuit confirmé avant le rendez-vous."
+    },
+    {
+      question: "Proposez-vous l'esthétique automobile (polissage, cirage) à Victoriaville?",
+      answer: "Oui, en plus du lavage à la main, nous offrons le polissage esthétique pour atténuer les micro-rayures légères, le cirage protecteur et la protection céramique pour conserver le lustre de la peinture plus longtemps."
+    },
+    {
+      question: "Combien de temps prend un lavage à la main à Victoriaville?",
+      answer: "Comptez environ 1 heure pour le lavage extérieur à la main, et de 2 à 3 heures pour un forfait complet intérieur et extérieur, selon la taille et l'état de votre véhicule."
+    }
+  ],
+  'shawinigan': [
+    {
+      question: "Desservez-vous tous les secteurs de Shawinigan?",
+      answer: "Oui, nous desservons l'ensemble de Shawinigan, incluant Shawinigan-Sud, Grand-Mère, Saint-Georges-de-Champlain, Saint-Gérard-des-Laurentides et Lac-à-la-Tortue, ainsi que les environs en Mauricie sur demande."
+    },
+    {
+      question: "Quel est le prix d'un lavage auto à Shawinigan?",
+      answer: "Le forfait de base (lavage extérieur à la main) va de 80$ pour une compacte à 150$ pour une fourgonnette. Le nettoyage intérieur complet s'ajoute pour 50$. Le prix exact est confirmé avant le rendez-vous, sans surprise."
+    },
+    {
+      question: "Pouvez-vous nettoyer un véhicule utilisé en plein air ou au chalet?",
+      answer: "Oui, c'est une demande fréquente en Mauricie: sable, boue, aiguilles de conifères et odeurs d'humidité. Nous faisons une aspiration en profondeur, un shampoing des tissus et un traitement anti-odeurs pour remettre l'habitacle à neuf après la saison du chalet."
+    },
+    {
+      question: "Combien de temps prend un nettoyage complet à Shawinigan?",
+      answer: "Comptez environ 1 heure pour le lavage extérieur à la main et de 2 à 3 heures pour un forfait complet intérieur et extérieur, selon la taille et l'état du véhicule."
+    },
+    {
+      question: "Comment réserver un lavage auto à Shawinigan?",
+      answer: "Réservez via notre formulaire de contact en indiquant votre type de véhicule et le service souhaité. Nous confirmons rapidement le rendez-vous et le prix exact, sans engagement de votre part."
+    }
+  ],
   // Default FAQs for other locations
   'default': [
     {

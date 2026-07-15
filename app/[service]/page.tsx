@@ -107,6 +107,35 @@ const serviceFeatures = {
       ),
     },
   ],
+  'lavage-auto-a-domicile': [
+    {
+      title: 'Zéro déplacement',
+      description: 'Nous venons chez vous, à la maison ou au travail, à l’heure convenue.',
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Équipement autonome',
+      description: 'Notre unité mobile apporte son eau et son électricité si nécessaire.',
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Même qualité qu’en atelier',
+      description: 'Nettoyage intérieur complet et lavage à la main, directement dans votre entrée.',
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ],
 };
 
 export default function ServicePage({ params }: ServicePageProps) {

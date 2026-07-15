@@ -167,6 +167,100 @@ const GSC_OPPORTUNITY_COPY: Record<string, Record<string, {
         'Service mobile pratique pour les résidents de Valleyfield et des environs.',
       ],
     },
+    rimouski: {
+      title: 'Lavage auto et lave-auto à la main à Rimouski',
+      intro: 'À Rimouski, nous offrons un lavage auto complet: extérieur à la main, nettoyage intérieur et finition protectrice adaptée au climat du Bas-Saint-Laurent, où le sel de mer et le calcium mettent la carrosserie à rude épreuve.',
+      bullets: [
+        'Lavage à la main soigné pour éliminer sel, calcium et résidus d’hiver.',
+        'Nettoyage intérieur des tapis, sièges et surfaces de l’habitacle.',
+        'Prise de rendez-vous simple pour les conducteurs de Rimouski et des environs.',
+      ],
+    },
+    victoriaville: {
+      title: 'Lave-auto à la main à Victoriaville',
+      intro: 'À Victoriaville, notre lave-auto à la main offre une alternative soignée au lave-auto libre-service: chaque véhicule est lavé, rincé et séché manuellement, avec une attention particulière aux jantes et aux finitions.',
+      bullets: [
+        'Lavage manuel complet, plus doux pour la peinture qu’un lave-auto automatique.',
+        'Options d’esthétique automobile: cirage, polissage et protection.',
+        'Service local pour Victoriaville et les Bois-Francs, avec devis rapide.',
+      ],
+    },
+    shawinigan: {
+      title: 'Lavage automobile à Shawinigan',
+      intro: 'À Shawinigan, nous offrons un service de lavage automobile complet: lavage extérieur à la main, nettoyage intérieur en profondeur et finitions protectrices, pour les conducteurs de Shawinigan et de la Mauricie.',
+      bullets: [
+        'Lavage à la main minutieux, adapté à l’état réel de votre véhicule.',
+        'Nettoyage intérieur complet disponible lors du même rendez-vous.',
+        'Équipe locale desservant Shawinigan, Shawinigan-Sud et les environs.',
+      ],
+    },
+    blainville: {
+      title: 'Lave-auto à la main à Blainville',
+      intro: 'À Blainville, nous offrons un lave-auto à la main complet, intérieur et extérieur: une alternative soignée aux lave-autos automatiques de la Rive-Nord, plus douce pour la peinture et attentive aux détails.',
+      bullets: [
+        'Lavage à la main de la carrosserie, des jantes et des vitres, avec séchage sans traces.',
+        'Forfait intérieur et extérieur combiné disponible lors du même rendez-vous.',
+        'Service pratique pour les résidents de Blainville et des Basses-Laurentides.',
+      ],
+    },
+  },
+  'lavage-auto-interieur': {
+    brossard: {
+      title: 'Nettoyage intérieur de voiture à Brossard',
+      intro: 'À Brossard, notre service de nettoyage intérieur automobile redonne à votre habitacle sa fraîcheur d’origine: aspiration en profondeur, shampoing des sièges et tapis, traitement des plastiques et désodorisation. Un entretien particulièrement utile pour les véhicules qui circulent quotidiennement sur la Rive-Sud.',
+      bullets: [
+        'Nettoyage intérieur complet: sièges, tapis, coffre, plastiques et vitres intérieures.',
+        'Traitement des taches, des poils d’animaux et des odeurs tenaces.',
+        'Option polissage et cirage extérieur combinable au même rendez-vous à Brossard.',
+      ],
+    },
+    sherbrooke: {
+      title: 'Lavage intérieur d’auto à Sherbrooke',
+      intro: 'À Sherbrooke, nous offrons un lavage intérieur d’auto en profondeur, disponible aussi à domicile: notre équipe nettoie l’habitacle complet chez vous ou au travail, un avantage apprécié des conducteurs de l’Estrie.',
+      bullets: [
+        'Aspiration complète, shampoing des tissus et nettoyage des surfaces de l’habitacle.',
+        'Service à domicile disponible partout à Sherbrooke, sans frais supplémentaires.',
+        'Traitement anti-odeurs et désinfection pour un intérieur sain, été comme hiver.',
+      ],
+    },
+    levis: {
+      title: 'Nettoyage intérieur de voiture à Lévis',
+      intro: 'À Lévis, notre service d’esthétique automobile prend soin de votre habitacle: nettoyage intérieur complet, traitement des cuirs et finitions soignées, avec la possibilité de combiner intérieur et extérieur au même rendez-vous.',
+      bullets: [
+        'Nettoyage intérieur détaillé, du tableau de bord jusqu’au coffre.',
+        'Forfait intérieur et extérieur combiné pour les conducteurs de Lévis.',
+        'Proximité de notre équipe de Québec: délais courts des deux côtés du fleuve.',
+      ],
+    },
+  },
+  'lavage-auto-a-domicile': {
+    sherbrooke: {
+      title: 'Lavage auto à domicile à Sherbrooke',
+      intro: 'À Sherbrooke, notre équipe mobile se déplace directement chez vous, à la maison ou au travail, pour un lavage auto complet à domicile: nettoyage intérieur en profondeur et lavage extérieur à la main, sans que vous ayez à vous déplacer.',
+      bullets: [
+        'Déplacement partout à Sherbrooke: Fleurimont, Rock Forest, Jacques-Cartier et les environs.',
+        'Nettoyage intérieur et extérieur réalisé sur place avec un équipement autonome.',
+        'Réservation simple et créneaux flexibles, y compris en fin de journée.',
+      ],
+    },
+    montreal: {
+      title: 'Lavage auto à domicile à Montréal',
+      intro: 'À Montréal, évitez les files au lave-auto: notre unité mobile vient à vous, dans votre entrée, votre stationnement ou au bureau, pour un nettoyage intérieur et extérieur complet de votre véhicule.',
+      bullets: [
+        'Service à domicile dans les arrondissements de Montréal et sur l’île.',
+        'Nettoyage intérieur complet: aspiration, sièges, plastiques et vitres.',
+        'Lavage extérieur à la main avec produits professionnels apportés sur place.',
+      ],
+    },
+    'ville-de-quebec': {
+      title: 'Lavage auto à domicile à Québec',
+      intro: 'À Québec, notre service de lavage auto à domicile couvre tous les quartiers, de Sainte-Foy à Charlesbourg en passant par Limoilou et Beauport. Nous nettoyons votre véhicule chez vous, pendant que vous vaquez à vos occupations.',
+      bullets: [
+        'Équipe locale basée à Québec, intervention rapide dans toute la ville.',
+        'Forfaits intérieur, extérieur ou complet, réalisés directement à votre domicile.',
+        'Devis gratuit et tarif annoncé avant le rendez-vous, sans surprise.',
+      ],
+    },
   },
 };
 

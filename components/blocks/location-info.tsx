@@ -66,6 +66,118 @@ const LOCATION_DATA: LocationData = {
       }
     ]
   },
+  'brossard': {
+    neighborhoods: [
+      'Quartier DIX30', 'Secteur B', 'Secteur C', 'Secteur M',
+      'Secteur N', 'Secteur O', 'Secteur P', 'Secteurs R et S'
+    ],
+    challenges: [
+      {
+        title: 'Circulation dense de la Rive-Sud',
+        description: 'Les trajets quotidiens sur les autoroutes 10, 30 et le pont Samuel-De Champlain exposent les véhicules à la poussière de freins et aux résidus de route qui encrassent carrosserie et habitacle.'
+      },
+      {
+        title: 'Véhicules familiaux très sollicités',
+        description: 'Sièges d’enfants, poils d’animaux, miettes et taches: les habitacles familiaux demandent un nettoyage en profondeur régulier pour rester sains et agréables.'
+      }
+    ]
+  },
+  'sherbrooke': {
+    neighborhoods: [
+      'Fleurimont', 'Mont-Bellevue', 'Jacques-Cartier', 'Rock Forest',
+      'Saint-Élie', 'Deauville', 'Brompton', 'Lennoxville'
+    ],
+    challenges: [
+      {
+        title: 'Hivers rigoureux de l’Estrie',
+        description: 'Le sel et le calcium des routes de Sherbrooke laissent des traces blanches tenaces sur les tapis et le bas de caisse, qui demandent des produits adaptés pour être éliminés sans abîmer les surfaces.'
+      },
+      {
+        title: 'Relief et gravier',
+        description: 'Les côtes et les rues en gravier de certains secteurs projettent poussière et petits débris qui s’accumulent dans les passages de roues et l’habitacle.'
+      }
+    ]
+  },
+  'levis': {
+    neighborhoods: [
+      'Vieux-Lévis', 'Saint-Romuald', 'Charny', 'Saint-Jean-Chrysostome',
+      'Saint-Nicolas', 'Pintendre', 'Lauzon', 'Breakeyville'
+    ],
+    challenges: [
+      {
+        title: 'Navettage quotidien vers Québec',
+        description: 'Les allers-retours par les ponts et l’autoroute 20 exposent les véhicules lévisiens aux abrasifs et aux résidus de route une bonne partie de l’année.'
+      },
+      {
+        title: 'Sel et calcium en hiver',
+        description: 'Comme partout dans la région de la Capitale-Nationale, le déglaçage intensif laisse des dépôts corrosifs qu’il faut retirer régulièrement pour protéger la carrosserie et les tapis.'
+      }
+    ]
+  },
+  'rimouski': {
+    neighborhoods: [
+      'Saint-Germain', 'Nazareth', 'Sacré-Cœur', 'Pointe-au-Père',
+      'Sainte-Odile', 'Rimouski-Est', 'Le Bic'
+    ],
+    challenges: [
+      {
+        title: 'Air salin du fleuve',
+        description: 'La proximité du Saint-Laurent expose les véhicules de Rimouski à l’air salin, qui accélère la corrosion. Un lavage régulier avec rinçage du bas de caisse aide à protéger la carrosserie.'
+      },
+      {
+        title: 'Hivers longs du Bas-Saint-Laurent',
+        description: 'Le sel de déglaçage utilisé plusieurs mois par année s’incruste dans les tapis et les seuils de portes; un nettoyage en profondeur au printemps est fortement recommandé.'
+      }
+    ]
+  },
+  'victoriaville': {
+    neighborhoods: [
+      'Centre-ville', 'Arthabaska', 'Sainte-Victoire-d’Arthabaska',
+      'Secteur du mont Arthabaska', 'Parc industriel'
+    ],
+    challenges: [
+      {
+        title: 'Poussière des zones rurales et agricoles',
+        description: 'Les rangs et routes de campagne des Bois-Francs génèrent de la poussière qui s’accumule rapidement sur la carrosserie et s’infiltre dans l’habitacle.'
+      },
+      {
+        title: 'Écarts de saison marqués',
+        description: 'Entre le calcium de l’hiver et le pollen du printemps, les véhicules de Victoriaville bénéficient d’un grand nettoyage saisonnier, intérieur comme extérieur.'
+      }
+    ]
+  },
+  'shawinigan': {
+    neighborhoods: [
+      'Shawinigan-Sud', 'Grand-Mère', 'Saint-Georges-de-Champlain',
+      'Saint-Gérard-des-Laurentides', 'Lac-à-la-Tortue', 'Baie-de-Shawinigan'
+    ],
+    challenges: [
+      {
+        title: 'Vie de plein air en Mauricie',
+        description: 'Sable, boue, aiguilles de conifères et équipement de plein air: les véhicules qui font la navette vers les chalets et le parc national demandent un nettoyage intérieur en profondeur.'
+      },
+      {
+        title: 'Humidité et odeurs',
+        description: 'L’humidité rapportée des activités nautiques et hivernales peut imprégner les tapis et créer des odeurs tenaces; un shampoing des tissus et un traitement anti-odeurs y remédient.'
+      }
+    ]
+  },
+  'blainville': {
+    neighborhoods: [
+      'Fontainebleau', 'Chambéry', 'Plan Bouchard', 'Blainvillier',
+      'Secteur de la gare', 'Vieux-Blainville'
+    ],
+    challenges: [
+      {
+        title: 'Navettage sur les autoroutes 15 et 640',
+        description: 'Les trajets quotidiens vers Montréal et Laval exposent les véhicules de Blainville aux résidus de route et à la poussière de freins qui ternissent la carrosserie.'
+      },
+      {
+        title: 'Secteurs résidentiels en développement',
+        description: 'Les chantiers de construction des nouveaux quartiers génèrent de la poussière fine qui s’accumule sur et dans les véhicules des environs.'
+      }
+    ]
+  },
   // Default data for other locations
   'default': {
     neighborhoods: [],
