@@ -32,4 +32,5 @@ Le site contient des pages locales pour Montréal, Ville de Québec, Laval, Gati
 ## Informations de contact
 
 - Adresse: 8255 Boul Henri Bourassa, Local 230, Québec, QC G1G 4C8
+- Téléphone: (581) 503-2505
 - Horaires: lundi au vendredi 8h00-18h00, samedi 9h00-17h00, dimanche fermé

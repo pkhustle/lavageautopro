@@ -1,4 +1,4 @@
-import { SITE_CONFIG, CONTACT_INFO } from './constants';
+import { SITE_CONFIG, CONTACT_INFO, LOCATIONS } from './constants';
 
 interface MetaProps {
   title?: string;
@@ -91,13 +91,14 @@ export function generateServiceSchema(service: string, location?: string, servic
       postalCode: CONTACT_INFO.postalCode,
       addressCountry: 'CA',
     },
+    telephone: CONTACT_INFO.phoneE164,
     geo: {
       '@type': 'GeoCoordinates',
       latitude: '46.8649',  // Example coordinates for Quebec City
       longitude: '-71.2173',
     },
-    url: serviceId && locationId 
-      ? `${SITE_CONFIG.url}/${serviceId}/${locationId}` 
+    url: serviceId && locationId
+      ? `${SITE_CONFIG.url}/${serviceId}/${locationId}`
       : SITE_CONFIG.url,
     priceRange: '$$',
     areaServed: location ? location : 'Québec',
@@ -125,6 +126,7 @@ export function generateLocalBusinessSchema() {
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     image: `${SITE_CONFIG.url}/images/auto-2179220_1280.jpg`,
+    telephone: CONTACT_INFO.phoneE164,
     address: {
       '@type': 'PostalAddress',
       streetAddress: CONTACT_INFO.address,
@@ -138,10 +140,10 @@ export function generateLocalBusinessSchema() {
       latitude: '46.8649',
       longitude: '-71.2173',
     },
-    areaServed: {
-      '@type': 'AdministrativeArea',
-      name: 'Québec',
-    },
+    areaServed: LOCATIONS.map((location) => ({
+      '@type': 'City',
+      name: location.name,
+    })),
     priceRange: '$$',
     openingHours: [
       'Mo-Fr 08:00-18:00',

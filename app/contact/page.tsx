@@ -108,6 +108,17 @@ export default function ContactPage({
                   </address>
                 </div>
                 <div>
+                  <h3 className="text-sm font-medium text-gray-900">Téléphone</h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    <a
+                      href={`tel:${CONTACT_INFO.phoneE164}`}
+                      className="text-primary hover:underline"
+                    >
+                      {CONTACT_INFO.phone}
+                    </a>
+                  </p>
+                </div>
+                <div>
                   <h3 className="text-sm font-medium text-gray-900">
                     Heures d&apos;ouverture
                   </h3>

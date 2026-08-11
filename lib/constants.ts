@@ -84,6 +84,10 @@ export const CONTACT_INFO = {
   city: 'Québec',
   province: 'QC',
   postalCode: 'G1G 4C8',
+  // Display format used in NAP / citations — keep byte-for-byte identical everywhere
+  phone: '(581) 503-2505',
+  // E.164 for tel: links and schema.org telephone
+  phoneE164: '+15815032505',
   hours: {
     monday: '8h00 - 18h00',
     tuesday: '8h00 - 18h00',

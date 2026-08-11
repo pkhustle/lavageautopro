@@ -5,10 +5,12 @@ import { SERVICES, CONTACT_INFO, SITE_CONFIG } from '../../lib/constants';
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  type FooterItem = string | { label: string; href: string };
+
   type FooterSection = {
     title: string;
     links?: { label: string; href: string; }[];
-    items?: string[];
+    items?: FooterItem[];
   };
 
   const footerSections: FooterSection[] = [
@@ -47,6 +49,7 @@ export function Footer() {
         CONTACT_INFO.address,
         `${CONTACT_INFO.city}, ${CONTACT_INFO.province}`,
         CONTACT_INFO.postalCode,
+        { label: CONTACT_INFO.phone, href: `tel:${CONTACT_INFO.phoneE164}` },
       ],
     },
   ];
@@ -86,14 +89,24 @@ export function Footer() {
                     </li>
                   ))
                 ) : section.items ? (
-                  section.items.map((item) => (
-                    <li key={item} className="text-sm text-gray-300 flex items-start">
-                      <svg className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))
+                  section.items.map((item) => {
+                    const isLink = typeof item !== 'string';
+                    const key = isLink ? item.href : item;
+                    return (
+                      <li key={key} className="text-sm text-gray-300 flex items-start">
+                        <svg className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {isLink ? (
+                          <a href={item.href} className="hover:text-primary transition-colors duration-300">
+                            {item.label}
+                          </a>
+                        ) : (
+                          <span>{item}</span>
+                        )}
+                      </li>
+                    );
+                  })
                 ) : null}
               </ul>
             </div>
