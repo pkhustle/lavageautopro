@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ServiceHero } from '../../../components/blocks/service-hero';
+import { LeadHero } from '../../../components/blocks/lead-hero';
 import { Features } from '../../../components/blocks/features';
 import { PriceEstimator } from '../../../components/blocks/price-estimator';
 import { LocationInfo } from '../../../components/blocks/location-info';
@@ -12,7 +12,6 @@ import { Breadcrumbs } from '../../../components/ui/breadcrumbs';
 import { SERVICES, LOCATIONS, SITE_CONFIG } from '../../../lib/constants';
 import { generateLocationMetadata, generateServiceSchema } from '../../../lib/seo';
 import Link from 'next/link';
-import { ImageCarousel } from '../../../components/blocks/image-carousel';
 
 interface LocationServicePageProps {
   params: {
@@ -287,44 +286,14 @@ export default function LocationServicePage({ params }: LocationServicePageProps
   // Define all sections as components
   const sections = {
     hero: (
-      <section key="hero" className="relative text-white py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-90 z-0"></div>
-        <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/images/washing-car-1397382_1280.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}>
-        </div>
-        <Container className="relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="text-primary">{service.name}</span> à {location.name}
-              </h1>
-              <p className="text-xl mb-8">
-                Service professionnel de {service.name.toLowerCase()} à {location.name}. 
-                Expertise locale, satisfaction garantie.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <Link href={`${SITE_CONFIG.url}/contact?location=${location.id}`}>
-                    Réserver maintenant
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  <a href="#tarifs">Voir les tarifs</a>
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-2xl">
-              <div className="relative" style={{ height: '300px' }}>
-                <ImageCarousel className="w-full h-full" imageCount={3} />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <LeadHero
+        key="hero"
+        headline={`${service.name} à ${location.name}`}
+        subhead={`Service professionnel de ${service.name.toLowerCase()} à ${location.name}. Expertise locale, satisfaction garantie.`}
+        backgroundImage="/images/washing-car-1397382_1280.jpg"
+        defaultService={service.id}
+        defaultLocation={location.id}
+      />
     ),
     
     locationInfo: (

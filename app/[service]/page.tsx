@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ServiceHero } from '../../components/blocks/service-hero';
+import { LeadHero } from '../../components/blocks/lead-hero';
 import { Features } from '../../components/blocks/features';
 import { ServicesGrid } from '../../components/blocks/services-grid';
 import { Container } from '../../components/ui/container';
@@ -169,28 +169,12 @@ export default function ServicePage({ params }: ServicePageProps) {
         ]}
       />
 
-      {/* Hero banner with image background - different from both home and location pages */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 opacity-50" style={{ 
-          backgroundImage: `url('/images/car-7291166_1280.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}></div>
-        <Container className="relative z-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {service.name}
-            </h1>
-            <p className="text-xl mb-8">
-              {service.description}
-            </p>
-            <Button asChild size="lg">
-              <Link href="/contact">Réserver maintenant</Link>
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <LeadHero
+        headline={`${service.name} professionnel au Québec`}
+        subhead={service.description}
+        backgroundImage="/images/car-7291166_1280.jpg"
+        defaultService={service.id}
+      />
 
       {/* Service features with cards - unique layout */}
       <section className="py-16 bg-white">

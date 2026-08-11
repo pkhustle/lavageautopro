@@ -4,8 +4,15 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Container } from '../ui/container';
-import { SERVICES, SITE_CONFIG } from '../../lib/constants';
+import { CallButton } from '../blocks/call-button';
+import { SERVICES, SITE_CONFIG, CONTACT_INFO } from '../../lib/constants';
 import { cn } from '../../lib/utils';
+
+const PhoneIcon = () => (
+  <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+  </svg>
+);
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +51,12 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          {/* Mobile: tap-to-call + menu button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <CallButton className="inline-flex items-center gap-1.5 rounded-full bg-green-600 px-3 py-1.5 text-sm font-bold text-white shadow-sm">
+              <PhoneIcon />
+              <span>{CONTACT_INFO.phone}</span>
+            </CallButton>
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md p-2.5 text-white"
@@ -147,7 +158,18 @@ export function Header() {
             )}
           </div>
 
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-4">
+            <CallButton className="group inline-flex items-center gap-2 text-white transition-colors hover:text-primary">
+              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-green-600 transition-transform group-hover:scale-105">
+                <PhoneIcon />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-[10px] font-medium uppercase tracking-wide text-white/60">
+                  Appelez 7j/7
+                </span>
+                <span className="text-lg font-extrabold">{CONTACT_INFO.phone}</span>
+              </span>
+            </CallButton>
             <Link
               href={`${SITE_CONFIG.url}/contact`}
               className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-primary to-accent px-4 py-2 text-sm font-medium text-white shadow-sm hover:shadow-md hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"

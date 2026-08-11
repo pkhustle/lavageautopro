@@ -1,4 +1,4 @@
-import { Hero } from '../components/blocks/hero';
+import { LeadHero } from '../components/blocks/lead-hero';
 import { ServicesGrid } from '../components/blocks/services-grid';
 import { Features } from '../components/blocks/features';
 import { PriceEstimator } from '../components/blocks/price-estimator';
@@ -89,13 +89,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: generateWebsiteSchema() }}
       />
-      <Hero
-        title="Lavage auto intérieur et extérieur à Québec"
-        description="Nettoyage professionnel de votre véhicule à Québec et dans les environs, en atelier ou à domicile. Une équipe expérimentée et des résultats garantis."
-        cta={{
-          text: "Réserver maintenant",
-          href: `${SITE_CONFIG.url}/contact`,
-        }}
+      <LeadHero
+        headline="Lavage auto intérieur et extérieur à Québec"
+        subhead="Nettoyage professionnel de votre véhicule à Québec et dans les environs, en atelier ou à domicile. Une équipe expérimentée et des résultats garantis."
       />
 
       <section className="bg-gray-50">
