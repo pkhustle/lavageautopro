@@ -3,6 +3,7 @@ import { Inter, Montserrat, Poppins } from 'next/font/google';
 import { SITE_CONFIG } from '../lib/constants';
 import { Header } from '../components/layout/header';
 import { Footer } from '../components/layout/footer';
+import { ClarityProvider } from '../components/analytics/clarity-provider';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -73,6 +74,7 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} ${poppins.variable}`}
     >
       <body className="min-h-screen bg-gray-50 font-sans antialiased">
+        <ClarityProvider />
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">

@@ -104,3 +104,8 @@ export const SITE_CONFIG = {
   defaultDescription: 'Lavage auto intérieur et extérieur à Québec: nettoyage de l\'habitacle, lavage à la main, polissage et service à domicile dans la région de Québec. Devis rapide et gratuit.',
   defaultKeywords: 'lavage auto québec, lavage auto intérieur, nettoyage voiture québec, lave auto à la main québec, lavage auto à domicile, détailing québec'
 };
+
+// Public by design (it ships in the client bundle); the env var only exists so a
+// staging deploy can point at a different Clarity project.
+export const CLARITY_PROJECT_ID =
+  process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || 'y0qz75pen5';

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from '../ui/button';
 import { LOCATIONS } from '../../lib/constants';
+import { CLARITY_EVENTS, trackEvent, trackTag } from '../../lib/analytics';
 
 interface ContactFormProps {
   onSubmit?: (data: FormData) => void;
@@ -15,6 +16,21 @@ export function ContactForm({ onSubmit, defaultLocation }: ContactFormProps) {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+  const hasStarted = useRef(false);
+
+  // Fired once, on first interaction with any field. `form_started` minus
+  // `lead_form_submitted` is the form abandonment rate.
+  const handleFirstFocus = () => {
+    if (hasStarted.current) return;
+    hasStarted.current = true;
+    trackEvent(CLARITY_EVENTS.FORM_STARTED);
+  };
+
+  const trackSuccess = (data: FormData) => {
+    trackTag('lead_service', String(data.get('service') || ''));
+    trackTag('lead_city', String(data.get('city') || ''));
+    trackEvent(CLARITY_EVENTS.LEAD_FORM_SUBMITTED);
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -27,6 +43,7 @@ export function ContactForm({ onSubmit, defaultLocation }: ContactFormProps) {
     try {
       if (onSubmit) {
         await onSubmit(formData);
+        trackSuccess(formData);
         form.reset();
         setFormStatus({
           type: 'success',
@@ -45,6 +62,7 @@ export function ContactForm({ onSubmit, defaultLocation }: ContactFormProps) {
           throw new Error(data.error || 'Une erreur est survenue');
         }
 
+        trackSuccess(formData);
         form.reset();
         setFormStatus({
           type: 'success',
@@ -52,9 +70,13 @@ export function ContactForm({ onSubmit, defaultLocation }: ContactFormProps) {
         });
       }
     } catch (error) {
+      const message =
+        error instanceof Error ? error.message : 'Une erreur est survenue. Veuillez réessayer.';
+      trackTag('form_error', message);
+      trackEvent(CLARITY_EVENTS.LEAD_FORM_ERROR);
       setFormStatus({
         type: 'error',
-        message: error instanceof Error ? error.message : 'Une erreur est survenue. Veuillez réessayer.',
+        message,
       });
     } finally {
       setIsSubmitting(false);
@@ -62,7 +84,7 @@ export function ContactForm({ onSubmit, defaultLocation }: ContactFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} onFocusCapture={handleFirstFocus} className="space-y-6">
       {formStatus.type && (
         <div
           className={`p-4 rounded-md ${
